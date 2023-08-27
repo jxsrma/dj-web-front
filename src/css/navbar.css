@@ -1,0 +1,31 @@
+.navbar {
+  background-color: black;
+  /* background: transparent; */
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.navbar-logo {
+  max-height: 2vh;
+  margin-left: 5vh;
+  margin-right: 50%;
+}
+.navbar-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.navbar-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-content ul li {
+  display: inline;
+  margin-left: 6vh;
+  font-size: 2vh;
+  text-transform: uppercase;
+}
