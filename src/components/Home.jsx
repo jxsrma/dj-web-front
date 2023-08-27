@@ -20,28 +20,28 @@ function Home() {
       ></iframe>
       <div className="home-social">
         <a
-          href="https://jxsrma.openinapp.co/instagram/jxsrma"
+          href="https://instagram.com/jxsrma"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fa-brands fa-instagram fa-2xl"></i>
         </a>
         <a
-          href="https://jxsrma.openinapp.co/youtube/11fe3"
+          href="https://www.youtube.com/@jxsrma"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fa-brands fa-youtube fa-2xl"></i>
         </a>
         <a
-          href="https://jxsrma.openinapp.co/twitter/jxsrma"
+          href="https://twitter.com/jxsrma"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fa-brands fa-twitter fa-2xl"></i>
+          <i class="fa-brands fa-x-twitter fa-2xl"></i>
         </a>
         <a
-          href="https://jxsrma.openinapp.co/url/bcfdb"
+          href="https://www.twitch.tv/jxsrma"
           target="_blank"
           rel="noopener noreferrer"
         >

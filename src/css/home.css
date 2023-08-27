@@ -60,9 +60,13 @@
 }
 .home-social i {
   color: grey;
-  padding-bottom: 10vh;
+  margin-bottom: 10vh;
   transition: 0.5s;
 }
 .home-social i:hover {
   color: white;
+  /* box-shadow:  rgb(255, 255, 255);   */
+  color: white;
+  text-shadow:0px 0px 10px white;
+
 }
