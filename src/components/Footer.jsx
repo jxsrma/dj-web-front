@@ -195,7 +195,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-copyright">
-        &copy; Copyright {new Date().getFullYear()}, JXSRMA{" "}
+        &copy; Copyright {new Date().getFullYear()}, JXSRMA
       </div>
     </div>
   );

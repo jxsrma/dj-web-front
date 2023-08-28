@@ -3,14 +3,14 @@ import "../css/bio.css";
 
 function Bio() {
   return (
-    <div className="bio">
+    <div className="bio" id="bio">
       <div className="bio-para">
         <p>
           Jash Sharma, born on August 3rd, 2001, is a young and talented music
           producer hailing from Indore, India. Despite lacking any musical
           background, Jash embarked on his musical journey in 2017. In a
           remarkable feat, he released his first music piece titled "All
-          Together" in 2020, adopting the pseudonym . His debut release
+          Together" in 2020, adopting the pseudonym&nbsp;<b>"JXSRMA"</b>. His debut release
           showcased his innate talent and passion for creating captivating
           melodies.
         </p>

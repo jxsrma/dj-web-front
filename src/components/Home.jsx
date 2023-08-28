@@ -3,10 +3,9 @@ import "../css/home.css";
 
 function Home() {
   return (
-    <div className="home-main">
+    <div className="home-main" id="home">
       {/* <div className="home-image-container"> */}
       <img src="https://i.ibb.co/PFx9Bds/Glass.jpg" alt="" />
-      hello
       <h1>Welcome</h1>
       <p>to the unknown music library</p>
       <iframe

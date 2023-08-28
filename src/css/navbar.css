@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  /* mix-blend-mode: difference; */
 }
 .navbar-logo {
   max-height: 2vh;
@@ -28,4 +29,17 @@
   margin-left: 6vh;
   font-size: 2vh;
   text-transform: uppercase;
+}
+.navbar-content ul li a {
+  color: gray;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.navbar-content ul li a:hover {
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+.navbar-content ul li .navbar-content-active {
+  color: white;
+  text-shadow: 0px 0px 10px white;
 }

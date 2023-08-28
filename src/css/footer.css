@@ -33,6 +33,7 @@
   margin: 0;
 }
 .footer-copyright {
+  font-weight: 400;
   background-color: black;
   color: white;
   text-align: center;
