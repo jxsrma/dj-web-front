@@ -5,13 +5,13 @@ import Bio from "./components/Bio";
 import Footer from "./components/Footer";
 import Youtube from "./components/Youtube";
 import Releases from "./components/Releases";
-import More from "./components/More";
+import Music from "./components/Music";
 function App() {
   return (
     <div className="App">
       <div></div>
       <Navbar />
-      {/* <More /> */}
+      {/* <Music /> */}
       <Home />
       <Youtube />
       <Bio />

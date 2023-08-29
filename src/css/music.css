@@ -1,0 +1,16 @@
+.music-container {
+    background-color: black;
+}
+.music-container-card{
+    height: 100vh;
+    display: flex;
+}
+.music-year{
+    padding-top: 20vh;
+    padding-left: 10vh;
+    font-size: 40vh;
+    color: rgb(44, 44, 44);
+}
+/* .music-card img{ */
+    /* transition: ; */
+/* } */
