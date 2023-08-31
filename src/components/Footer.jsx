@@ -2,7 +2,7 @@ import React from "react";
 import "../css/footer.css";
 function Footer() {
   return (
-    <div className="footer-main">
+    <footer className="footer-main">
       <div className="footer-row">
 
         <div className="footer-col">
@@ -197,7 +197,7 @@ function Footer() {
       <div className="footer-copyright">
         &copy; Copyright {new Date().getFullYear()}, JXSRMA
       </div>
-    </div>
+    </footer>
   );
 }
 
