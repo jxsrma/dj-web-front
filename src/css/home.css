@@ -2,7 +2,6 @@
   display: flex;
   background-color: black;
   height: 100vh;
-  width: 100%;
   z-index: -999;
   color: white;
 }
@@ -47,7 +46,7 @@
   mix-blend-mode: difference;
 }
 .home-main iframe {
-  transform: translate(-180vh, 50vh);
+  transform: translate(-170vh, 53vh);
   display: flex;
   min-width: 40%;
   height: 40%;
@@ -59,6 +58,7 @@
   align-items: center;
   flex-direction: column;
   transform: translate(-150vh, 40vh);
+  transition: 0.5s;
 }
 .home-social i {
   color: grey;
@@ -68,7 +68,82 @@
 .home-social i:hover {
   color: white;
   /* box-shadow:  rgb(255, 255, 255);   */
-  color: white;
-  text-shadow:0px 0px 10px white;
+  text-shadow: 0px 0px 10px white;
+}
 
+@media screen and (max-width: 800px) {
+  .home-main h1 {
+    font-size: 10vh;
+    transform: translate(-75vh, 10vh);
+  }
+  .home-main p {
+    display: flex;
+  }
+  .home-main iframe {
+    transform: translate(-175vh, 53vh);
+    display: flex;
+    min-width: 40%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-main h1 {
+    font-size: 8vh;
+    transform: translate(-75vh, 10vh);
+  }
+  .home-main p {
+    font-size: 5vh;
+  transform: translate(-128vh, 20vh);
+  }
+  .home-main iframe {
+    transform: translate(-155vh, 60vh);
+    display: flex;
+    min-width: 60%;
+    /* height: 40%; */
+  }
+  .home-social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transform: translate(-190vh, 50vh);
+  }
+  .home-social i {
+    color: grey;
+    margin-right: 5vw;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-main img {
+    filter: blur(2px);
+    padding-top: 15vh;
+    transform: translateX(-25vh);
+    height: 70vh;
+  }
+  .home-main h1 {
+    font-size: 5vh;
+    transform: translate(-75vh, 15vh);
+  }
+  .home-main p {
+    transform: translate(-113vh, 20vh);
+  }
+  .home-main iframe {
+    transform: translate(-135vh, 50vh);
+    display: flex;
+    min-width: 70%;
+    /* height: 40%; */
+  }
+  .home-social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transform: translate(-170vh, 40vh);
+  }
+  .home-social i {
+    color: grey;
+    margin-right: 7vw;
+    transition: 0.5s;
+  }
 }
