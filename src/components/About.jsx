@@ -1,18 +1,20 @@
 import React from "react";
-import "../css/bio.css";
+import "../css/about.css";
 
-function Bio() {
+function About() {
   return (
-    <div className="bio" id="bio">
-      <div className="bio-para">
+    <div className="about" id="about">
+      
+      <div className="about-para">
+        <h1>About</h1>
         <p>
           Jash Sharma, born on August 3rd, 2001, is a young and talented music
           producer hailing from Indore, India. Despite lacking any musical
           background, Jash embarked on his musical journey in 2017. In a
           remarkable feat, he released his first music piece titled "All
-          Together" in 2020, adopting the pseudonym&nbsp;<b>"JXSRMA"</b>. His debut release
-          showcased his innate talent and passion for creating captivating
-          melodies.
+          Together" in 2020, adopting the pseudonym&nbsp;<b>"JXSRMA"</b>. His
+          debut release showcased his innate talent and passion for creating
+          captivating melodies.
         </p>
         <p>
           Alongside his music pursuits, Jash is also a computer geek, currently
@@ -37,9 +39,8 @@ function Bio() {
         </p>
       </div>
 
-      <img src="https://i.ibb.co/nfVB7nc/divider.jpg" alt="" />
     </div>
   );
 }
 
-export default Bio;
+export default About;
