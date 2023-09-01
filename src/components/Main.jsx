@@ -1,24 +1,34 @@
 import React from "react";
+// eslint-disable-next-line
 import Navbar from "./Navbar";
+// eslint-disable-next-line
 import Home from "./Home";
-// import About from "./About";
+// eslint-disable-next-line
+import About from "./About";
+// eslint-disable-next-line
 import Footer from "./Footer";
+// eslint-disable-next-line
 import Youtube from "./Youtube";
-// import Releases from "./Releases";
-// import Music from "./Music";
-
+// eslint-disable-next-line
+import Releases from "./Releases";
+// eslint-disable-next-line
+import Music from "./Music";
+// eslint-disable-next-line
+import Loading from "./Loading";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function Main() {
   return (
     <div>
+      <Loading />
       {/* <Router> */}
-        <Navbar />
-         <Home/>
-       <Youtube />
-        {/* <Releases /> */}
-        {/* <About /> */}
-        {/* <Routes>
+      <Navbar />
+      <Home />
+      <Youtube />
+      {/* <Releases /> */}
+      <About />
+      {/* <Music/> */}
+      {/* <Routes>
           <Route
             exact
             path="/"
@@ -45,7 +55,7 @@ function Main() {
           />
 
         </Routes> */}
-        <Footer />
+      <Footer />
       {/* </Router> */}
     </div>
   );

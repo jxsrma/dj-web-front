@@ -58,12 +58,12 @@
   align-items: center;
   flex-direction: column;
   transform: translate(-150vh, 40vh);
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 .home-social i {
   color: grey;
   margin-bottom: 10vh;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 .home-social i:hover {
   color: white;
@@ -111,7 +111,6 @@
   .home-social i {
     color: grey;
     margin-right: 5vw;
-    transition: 0.5s;
   }
 }
 
@@ -144,6 +143,5 @@
   .home-social i {
     color: grey;
     margin-right: 7vw;
-    transition: 0.5s;
   }
 }

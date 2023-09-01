@@ -1,12 +1,201 @@
 .navbar {
-  background-color: black;
+  background-image: none;
+  backdrop-filter: blur(5px);
   /* background: transparent; */
+  color: white;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  display: inline;
+  /* flex-direction: row; */
+  z-index: 999;
+  transition: 0.5s ease;
+}
+
+.scroll{
+  background-color: black;
+  /* background-image: ; */
+}
+
+.navbar-content{
+  display: flex;
+  /* flex-direction: row; */
+}
+
+/*Styling logo*/
+.navbar-logo {
+  text-align: center;
+}
+.navbar-logo img {
+  max-height: 2vh;
+  margin-left: 5vw;
+  margin-right: 50vw;
+  margin-top: 4vh;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  width: 30%;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+  color: gray;
+  transition: 0.5s;
+}
+.nav-links li a:hover {
+  color: white;
+  text-shadow: 0px 0px 10px white;
+
+}
+
+.nav-links .nav-link-active{
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+.nav-links li {
+  position: relative;
+}
+/* .nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: white;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+} */
+.nav-links li a:hover::before {
+  width: 80%;
+}
+/*Styling Hamburger Icon*/
+.navbar-hamburger div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.navbar-hamburger {
+  display: none;
+}
+
+/*Stying for small screens*/
+
+@media screen and (max-width: 1000px) {
+  nav {
+    position: fixed;
+    z-index: 3;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 1vh;
+    /* background-image: url("../images/JXSRMA.png");
+    background-repeat: no-repeat;
+    background-size: 15vh;
+    background-position: 2vh; */
+  }
+  .navbar-logo img {
+    max-height: 15px;
+    margin-left: 5vw;
+    padding-top: 0;
+    margin-top: 1vh;
+  }
+  .navbar-hamburger {
+    display: block;
+    position: absolute;
+    padding-right: 1vh;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: black;
+    font-size: 3vh;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 5vh;
+    padding-bottom: 20%;
+    transform: translate(-1.5vh,-1.5vh);
+    flex-direction: column;
+    clip-path: inset(-30vh 0 100vh 100%);
+    -webkit-clip-path: inset(-30vh 0 100vh 100%);
+    /* clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%); */
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: inset(0);
+    -webkit-clip-path: inset(0);
+    /* clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%); */
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.open {
+    opacity: 1;
+  }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* .navbar {
+  background-color: black;
   color: white;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 999;
-  /* mix-blend-mode: difference; */
+  z-index: 9999;
 }
 .navbar-logo {
   max-height: 2vh;
@@ -14,8 +203,8 @@
   margin-right: 50%;
 }
 .navbar-content {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-top: 3vh;
   padding-bottom: 3vh;
 }
@@ -42,4 +231,4 @@
 .navbar-content ul li .navbar-content-active {
   color: white;
   text-shadow: 0px 0px 10px white;
-}
+} */
