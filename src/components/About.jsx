@@ -40,7 +40,7 @@ function About() {
           </p>
         </div>
         <div className="about-images">
-          <img src="https://wallpapercave.com/wp/wp6988384.jpg" alt="" />
+          <img src="https://i.ibb.co/nfVB7nc/divider.jpg" alt="" />
           {/* <img src="https://wallpapercave.com/wp/wp6988384.jpg" alt="" />
         <img src="https://wallpapercave.com/wp/wp6988384.jpg" alt="" />
         <img src="https://wallpapercave.com/wp/wp6988384.jpg" alt="" /> */}
