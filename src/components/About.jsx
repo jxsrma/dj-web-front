@@ -8,35 +8,28 @@ function About() {
       <div className="about-content">
         <div className="about-para">
           <p>
-            Jash Sharma, born on August 3rd, 2001, is a young and talented music
-            producer hailing from Indore, India. Despite lacking any musical
-            background, Jash embarked on his musical journey in 2017. In a
-            remarkable feat, he released his first music piece titled "All
-            Together" in 2020, adopting the pseudonym&nbsp;<span>"JXSRMA"</span>
-            . His debut release showcased his innate talent and passion for
-            creating captivating melodies.
+            🎵🌟 Jash Sharma, born on 3rd August 2001 in Indore, India, is a
+            young and growing music producer. Despite lacking a musical
+            background, he fearlessly entered the music scene in 2017. 🚀 In
+            2020, under the pseudonym <span>JXSRMA</span>, he amazed listeners
+            with his first release "All Together". 🎶🎉
           </p>
           <p>
-            Alongside his music pursuits, Jash is also a computer geek,
-            currently pursuing a degree in computer science. This blend of
-            technical knowledge and artistic creativity fuels his unique
-            approach to music production. Continuously learning and honing his
-            craft, Jash has proven himself to be an extraordinary artist.
+            🎓💻 Alongside his passion for music, Jash is a computer geek
+            pursuing a degree in computer science. 📚💿 Balancing his studies
+            and music career, he continues to learn and evolve as a music
+            producer, showcasing his remarkable talent. 🎹🎧
           </p>
           <p>
-            Since his initial release, Jash has continued to impress with
-            subsequent works, earning accolades for his commendable
-            contributions to the music industry. His dedication and commitment
-            shine through in each composition, captivating listeners with his
-            distinct sound.
+            🌟👏 Since his initial release, Jash has delighted fans with more
+            incredible work, receiving well-deserved acclaim for his commendable
+            achievements. 🎶💯
           </p>
           <p>
-            Jash Sharma represents the perfect harmony of his dual passions:
-            music and computer science. As he delves deeper into his musical
-            exploration, he is poised to make significant strides in the
-            industry. Keep an eye out for this rising star as he continues to
-            astound audiences with his remarkable talent and unwavering pursuit
-            of musical excellence.
+            Jash Sharma is a testament to the power of passion and
+            determination, blending the worlds of music and technology to create
+            something truly extraordinary. 🎵🔥 Keep an eye on this exceptional
+            artist as he continues to make waves in the music industry! 🌊🎶
           </p>
         </div>
         <div className="about-images">

@@ -1,6 +1,6 @@
 .navbar {
   background-image: none;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   /* background: transparent; */
   color: white;
   width: 100vw;

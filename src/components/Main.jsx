@@ -20,13 +20,13 @@ import Loading from "./Loading";
 function Main() {
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       {/* <Router> */}
       <Navbar />
       <Home />
-      <Youtube />
+      {/* <Youtube /> */}
       {/* <Releases /> */}
-      <About />
+      {/* <About /> */}
       {/* <Music/> */}
       {/* <Routes>
           <Route

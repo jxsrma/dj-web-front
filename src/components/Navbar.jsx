@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   const changeBG = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 10) {
         setNavbar(true)
 
     } else {

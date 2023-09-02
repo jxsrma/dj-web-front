@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "../css/music.css";
-function More() {
+function Music() {
   const [year, setYear] = useState("latest");
+
   return (
     <div className="music-container" id="music-top">
       <div className="music-heading">All Releases</div>
@@ -90,7 +91,7 @@ function More() {
       </div>
 
       <div className="music-container-card" id="latest">
-      <div className="year-heading">LATEST</div>
+        <div className="year-heading">LATEST</div>
         <div className="music-year">Latest</div>
         <div className="music-card-grid">
           <div className="music-card">
@@ -202,9 +203,8 @@ function More() {
         </div>
       </div>
 
-
       <div className="music-container-card" id="2020">
-      <div className="year-heading">2020</div>
+        <div className="year-heading">2020</div>
         <div className="music-year">2020</div>
         <div className="music-card-grid">
           <div className="music-card">
@@ -235,7 +235,7 @@ function More() {
         </div>
       </div>
       <div className="music-container-card" id="2019">
-      <div className="year-heading">2019</div>
+        <div className="year-heading">2019</div>
         <div className="music-year">2019</div>
         <div className="music-card-grid">
           <div className="music-card">
@@ -269,4 +269,4 @@ function More() {
   );
 }
 
-export default More;
+export default Music;
