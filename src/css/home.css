@@ -22,7 +22,7 @@
 .home-main h1 {
   position: absolute;
   transform: translate(15vw, 10vh);
-  font-size: 10vh;
+  font-size: 6rem;
   letter-spacing: 2vh;
   text-transform: uppercase;
   mix-blend-mode: difference;
@@ -30,10 +30,10 @@
 }
 .home-main p {
   position: absolute;
-  transform: translate(15vw, 25vh);
+  transform: translate(15vw, 30vh);
   min-width: 80vw;
   max-height: 10vh;
-  font-size: 5vh;
+  font-size: 2rem;
   font-family: "Jost", sans-serif;
   font-weight: 200;
   line-height: 5vh;
@@ -70,9 +70,11 @@
 
 @media screen and (max-width: 1000px) {
   .home-main h1 {
+    font-size: 4rem;
     transform: translate(5vw, 10vh);
   }
   .home-main p {
+    font-size: 2rem;
     transform: translate(5vw, 25vh);
   }
   .home-main iframe {
@@ -82,10 +84,9 @@
 
 @media screen and (max-width: 800px) {
   .home-main h1 {
-    font-size: 12vw;
   }
   .home-main p {
-    font-size: 5vw;
+    font-size: 2rem;
     width: 80vw;
     transform: translate(5vw, 30vh);
   }
@@ -135,7 +136,10 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .home-main iframe {
-    
+  .home-main h1 {
+  font-size: 2rem;
+  }
+  .home-main p {
+    font-size: 1.5rem;
   }
 }

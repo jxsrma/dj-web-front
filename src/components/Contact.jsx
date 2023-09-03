@@ -28,26 +28,26 @@ function Contact() {
         <form action="get">
           <h1>Fill this form</h1>
           <div className="form-field">
-            <label htmlFor="fName" placeholder="Name">
-              Name
+            <label htmlFor="name" placeholder="Name">
+            📛 Name
             </label>
-            <input type="text" id="fName" required />
+            <input type="text" id="name" required />
           </div>
           <div className="form-field">
             <label htmlFor="email" placeholder="Name">
-              E-Mail
+            📧 E-Mail
             </label>
             <input type="email" id="email" required />
           </div>
           <div className="form-field">
             <label htmlFor="subject" placeholder="Name">
-              Subject
+            💼 Subject
             </label>
             <input type="text" id="subject" required />
           </div>
           <div className="form-field">
             <label htmlFor="subject" placeholder="Name">
-              Message
+            ✍️ Message
             </label>
             <textarea type="text" id="subject" required />
           </div>

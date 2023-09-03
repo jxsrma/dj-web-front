@@ -5,7 +5,7 @@
 .music-heading {
   color: white;
   font-weight: 500;
-  font-size: 5vh;
+  font-size: 2rem;
   padding-top: 10vh;
   padding-left: 5vw;
 }
@@ -18,7 +18,7 @@
 }
 
 .music-release-years ul {
-  font-size: 2vh;
+  font-size: 1rem;
   list-style: none;
 }
 .music-release-years ul li {
@@ -78,7 +78,7 @@
   position: absolute;
   padding-top: 30vh;
   padding-left: 50vw;
-  font-size: 20vw;
+  /* font-size: 20vw; */
   color: rgb(20, 20, 20);
   mix-blend-mode: difference;
   /* z-index: -9; */
@@ -207,13 +207,11 @@
   .music-release-years ul {
     display: flex;
     flex-direction: row;
-    font-size: 2vh;
     list-style: none;
   }
   .music-release-years ul li {
     padding-top: 5vh;
     padding-right: 3vw;
-    /* size: 30vh; */
   }
   .music-release-years ul li a {
     color: grey;

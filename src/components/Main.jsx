@@ -40,15 +40,15 @@ function Main() {
 
           <Route
             exact
-            path="/all-releases"
+            path="/release"
             element={<Releases />} //active="activeLink" title="Official Site"
           />
-
+{/* 
           <Route
             exact
             path="/music"
             element={<Music />} //active="activeLink" title="Official Site"
-          />
+          /> */}
 
           <Route
             exact

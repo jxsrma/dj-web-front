@@ -1,6 +1,8 @@
 .contact-main {
   min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   /* width: 100%; */
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -20,12 +22,15 @@
 }
 .contact-heading h1 {
   text-transform: uppercase;
-  font-size: 3vw;
+  width: 70%;
+  text-align: left;
+  font-size: 4rem;
   background-color: rgb(20, 20, 20);
 }
 .contact-heading p {
   text-align: justify;
-  font-size: 1vw;
+  width: 70%;
+  font-size: 1.5rem;
   background-color: rgb(20, 20, 20);
 }
 .contact-form {
@@ -34,7 +39,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 25vh;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -44,8 +49,9 @@
   padding: 2vh 2vw;
 }
 .contact-form form h1 {
+  text-transform: uppercase;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 .form-field {
   display: flex;
@@ -59,27 +65,42 @@
 }
 
 .form-field input {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(10, 10, 10);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  color: white;
+  font-size: 1.2rem;
   width: 70%;
+}
+.form-field input:focus{
+  outline: none;
 }
 
 .form-field textarea {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(10, 10, 10);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
   text-align: justify;
   width: 70%;
   min-height: 10vh;
   resize: none;
   color: white;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   font-family: jost;
+}
+
+.form-field textarea:focus{
+  outline: none;
 }
 
 .contact-send-btn {
   background-color: unset;
   border: 1px solid white;
-  padding: 1vh 3vw;
+  padding: 1vh 2vw;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-family: jost;
   font-weight: 500;
   transition: 0.5s ease;
@@ -101,10 +122,22 @@
 
 @media screen and (max-width: 1000px) {
   .contact-heading h1 {
-    font-size: 4vw;
+    font-size: 2.5rem;
   }
   .contact-heading p {
-    font-size: 2vw;
+    font-size: 1rem;
+  }
+  .form-field{
+    flex-direction: column;
+  }
+  .form-field label{
+    width: 100%;
+  }
+  .form-field input{
+    width: 100%;
+  }
+  .form-field textarea{
+    width: 100%;
   }
 }
 
@@ -113,23 +146,39 @@
     flex-direction: column;
   }
   .contact-heading {
-    text-align: center;
     margin-top: 10vh;
     min-width: 80%;
   }
   .contact-heading h1 {
     min-width: 100%;
-    font-size: 4vw;
+    font-size: 1.5rem;
   }
   .contact-heading p {
-    font-size: 2vw;
+    font-size: 1rem;
     min-width: 100%;
   }
   .contact-form {
     min-width: 80%;
     margin-top: 5vh;
   }
+  .contact-form form h1 {
+    font-size: 1.5rem;
+  }
   .contact-form form {
     min-width: 80%;
+  }
+  .form-field label {
+    font-size: 1rem;
+  }
+  .form-field input {
+    font-size: 1rem;
+  }
+
+  .form-field textarea {
+    font-size: 1rem;
+  }
+
+  .contact-send-btn {
+    font-size: 1rem;
   }
 }

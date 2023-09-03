@@ -170,7 +170,7 @@ function Footer() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/jash-sharma-607940182/"
+                href="https://www.linkedin.com/in/jashsharma/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

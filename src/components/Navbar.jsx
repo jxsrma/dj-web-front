@@ -38,7 +38,7 @@ function Navbar() {
                 className={active === "home" ? "nav-link-active" : ""}
                 onClick={() => {
                   setActive("home");
-                  handleHamburgerClick();
+                  setIsOpen(false);
                 }}
               >
                 Home
@@ -50,7 +50,7 @@ function Navbar() {
                 className={active === "release" ? "nav-link-active" : ""}
                 onClick={() => {
                   setActive("release");
-                  handleHamburgerClick();
+                  setIsOpen(false);
                 }}
               >
                 Releases
@@ -62,7 +62,7 @@ function Navbar() {
                 className={active === "about" ? "nav-link-active" : ""}
                 onClick={() => {
                   setActive("about");
-                  handleHamburgerClick();
+                  setIsOpen(false);
                 }}
               >
                 About
@@ -74,7 +74,7 @@ function Navbar() {
                 className={active === "contact" ? "nav-link-active" : ""}
                 onClick={() => {
                   setActive("contact");
-                  handleHamburgerClick();
+                  setIsOpen(false);
                 }}
               >
                 Contact
