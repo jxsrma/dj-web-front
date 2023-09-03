@@ -15,48 +15,54 @@ import Releases from "./Releases";
 import Music from "./Music";
 // eslint-disable-next-line
 import Loading from "./Loading";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// eslint-disable-next-line
+import Contact from "./Contact";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function Main() {
   return (
     <div>
       {/* <Loading /> */}
-      {/* <Router> */}
-      <Navbar />
-      <Home />
-      {/* <Youtube /> */}
-      {/* <Releases /> */}
-      {/* <About /> */}
-      {/* <Music/> */}
-      {/* <Routes>
+      <Router>
+        <Navbar />
+        {/* <Home />
+      <Youtube />
+      <Releases />
+      <About />
+      <Music/> */}
+        <Routes>
           <Route
             exact
             path="/"
-            element={<Home  />} //active="activeLink" title="Official Site"
+            element={<Home />} //active="activeLink" title="Official Site"
           />
-          
-          
+
           <Route
             exact
             path="/all-releases"
-            element={ <Releases />} //active="activeLink" title="Official Site"
+            element={<Releases />} //active="activeLink" title="Official Site"
           />
 
           <Route
             exact
             path="/music"
-            element={ <Music />} //active="activeLink" title="Official Site"
-          />
-         
-         <Route
-            exact
-            path="/about"
-            element={ <About />} //active="activeLink" title="Official Site"
+            element={<Music />} //active="activeLink" title="Official Site"
           />
 
-        </Routes> */}
-      <Footer />
-      {/* </Router> */}
+          <Route
+            exact
+            path="/Contact"
+            element={<Contact />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            exact
+            path="/about"
+            element={<About />} //active="activeLink" title="Official Site"
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }

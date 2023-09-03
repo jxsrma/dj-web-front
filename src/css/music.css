@@ -1,4 +1,5 @@
 .music-container {
+  min-height: 100vh;
   background-color: black;
 }
 .music-heading {
@@ -45,8 +46,8 @@
   min-height: 100vh;
   display: flex;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
-    url("../images/JXSRMADPWBG.png");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
+    url("../images/JXSRMADPWBG.png"); */
   background-size: 50px;
 }
 
@@ -57,7 +58,7 @@
 .year-heading {
   cursor: pointer;
   position: absolute;
-  padding-top: 5vh;
+  margin-top: 5vh;
   padding-left: 5vw;
   font-weight: 500;
 }
@@ -193,4 +194,30 @@
   .music-image img {
     width: 150%;
   }
+}
+
+@media screen and (max-width: 360px) {
+  .music-release-years {
+    position: fixed;
+    transform: translate(3vw, 50vh);
+    z-index: 1;
+    transition: 0.5s ease;
+  }
+  
+  .music-release-years ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 2vh;
+    list-style: none;
+  }
+  .music-release-years ul li {
+    padding-top: 5vh;
+    padding-right: 3vw;
+    /* size: 30vh; */
+  }
+  .music-release-years ul li a {
+    color: grey;
+    text-decoration: none;
+    transition: 0.5s ease;
+  } 
 }

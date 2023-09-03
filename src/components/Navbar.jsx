@@ -2,35 +2,25 @@ import React, { useState } from "react";
 import "../css/navbar.css";
 import logo from "../images/JXSRMA.png";
 
-// import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // https://codepen.io/hitensharma/details/dybryGE
 function Navbar() {
   // const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("home");
-  const [hcontainer, setNavbar] = useState(false)
+  const [hcontainer, setNavbar] = useState(false);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const changeBG = () => {
-    if (window.scrollY >= 10) {
-        setNavbar(true)
-
-    } else {
-        setNavbar(false)
-    }
-}
-window.addEventListener('scroll', changeBG)
-
   return (
     <div>
-      <nav className={hcontainer ? 'navbar scroll' : "navbar"}>
+      <nav className="navbar">
         <div className="navbar-content">
           <div className="navbar-logo">
-            <a href="#home" onClick={()=>setActive("home")}>
-            <img src={logo} alt="Logo" />
+            <a href="#home" onClick={() => setActive("home")}>
+              <img src={logo} alt="Logo" />
             </a>
           </div>
           <div
@@ -43,16 +33,52 @@ window.addEventListener('scroll', changeBG)
           </div>
           <ul className={`nav-links ${isOpen ? "open" : ""}`}>
             <li className={isOpen ? "open" : ""}>
-              <a href="#home" className={active === "home"?"nav-link-active":""} onClick={()=>setActive("home")}>Home</a>
+              <NavLink
+                to="/"
+                className={active === "home" ? "nav-link-active" : ""}
+                onClick={() => {
+                  setActive("home");
+                  handleHamburgerClick();
+                }}
+              >
+                Home
+              </NavLink>
             </li>
             <li className={isOpen ? "open" : ""}>
-              <a href="#release" className={active === "release"?"nav-link-active":""} onClick={()=>setActive("release")}>Releases</a>
+              <NavLink
+                to="/release"
+                className={active === "release" ? "nav-link-active" : ""}
+                onClick={() => {
+                  setActive("release");
+                  handleHamburgerClick();
+                }}
+              >
+                Releases
+              </NavLink>
             </li>
             <li className={isOpen ? "open" : ""}>
-              <a href="#about" className={active === "about"?"nav-link-active":""} onClick={()=>setActive("about")}>About</a>
+              <NavLink
+                to="/about"
+                className={active === "about" ? "nav-link-active" : ""}
+                onClick={() => {
+                  setActive("about");
+                  handleHamburgerClick();
+                }}
+              >
+                About
+              </NavLink>
             </li>
             <li className={isOpen ? "open" : ""}>
-              <a href="#contact" className={active === "contact"?"nav-link-active":""} onClick={()=>setActive("contact")}>Contact</a>
+              <NavLink
+                to="/contact"
+                className={active === "contact" ? "nav-link-active" : ""}
+                onClick={() => {
+                  setActive("contact");
+                  handleHamburgerClick();
+                }}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>

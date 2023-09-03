@@ -5,8 +5,8 @@
   color: white;
   background-color: black;
   background-image: url("../images/JXSRMADPWBG.png");
-  background-position: 3vh;
   background-size: 50px;
+  background-position: 3vh;
   animation: move 30s linear infinite;
   z-index: 99999;
   opacity: 0;
@@ -46,6 +46,8 @@
     font-size: 5vw;
   }
 }
+
+ /* animation: move 30s linear infinite; */
 
 @keyframes move {
   0% {

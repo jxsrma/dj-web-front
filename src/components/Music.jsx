@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "../css/music.css";
 function Music() {
   const [year, setYear] = useState("latest");
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}, [])
 
   return (
     <div className="music-container" id="music-top">

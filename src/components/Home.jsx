@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/home.css";
+import Youtube from "./Youtube";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}, [])
   return (
+    <>
     <div className="home-main" id="home">
       {/* <div className="home-image-container"> */}
       <img src="https://i.ibb.co/PFx9Bds/Glass.jpg" alt="" />
@@ -48,6 +56,8 @@ function Home() {
         </a>
       </div>
     </div>
+      <Youtube />
+    </>
   );
 }
 
