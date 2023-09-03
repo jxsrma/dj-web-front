@@ -78,7 +78,7 @@
   position: absolute;
   padding-top: 30vh;
   padding-left: 50vw;
-  /* font-size: 20vw; */
+  font-size: 20vw;
   color: rgb(20, 20, 20);
   mix-blend-mode: difference;
   /* z-index: -9; */
