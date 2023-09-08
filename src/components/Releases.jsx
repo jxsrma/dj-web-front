@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import "../css/releases.css";
 import Music from "./Music";
 
-function Releases() {
+function Releases(props) {
+  document.title = "JXSRMA | " + props.title;
   useEffect(() => {
     window.scrollTo({
       top: 0,

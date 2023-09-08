@@ -41,13 +41,13 @@ function Main() {
           <Route
             exact
             path="/"
-            element={<Home />} //active="activeLink" title="Official Site"
+            element={<Home title="Official Site 🏠"/>} //active="activeLink" title="Official Site"
           />
 
           <Route
             exact
             path="/release"
-            element={<Releases />} //active="activeLink" title="Official Site"
+            element={<Releases title="Releases 🎶"/>} //active="activeLink" title="Official Site"
           />
           {/* 
           <Route
@@ -59,25 +59,25 @@ function Main() {
           <Route
             exact
             path="/Contact"
-            element={<Contact />} //active="activeLink" title="Official Site"
+            element={<Contact title="Contact 📩"/>} //active="activeLink" title="Official Site"
           />
           <Route
             exact
             path="/about"
-            element={<About />} //active="activeLink" title="Official Site"
+            element={<About title="About 📖"/>} //active="activeLink" title="Official Site"
           />
           <Route
             exact
             path="/support"
-            element={<Support />} //active="activeLink" title="Official Site"
+            element={<Support title="Support 💰"/>} //active="activeLink" title="Official Site"
           />
-          <Route
+          {/* <Route
             path="/admin"
             element={<Login />} //active="activeLink" title="Official Site"
-          />
+          /> */}
           <Route
             path="/*"
-            element={<Error404 />} //active="activeLink" title="Official Site"
+            element={<Error404 title="Error 🚧"/>} //active="activeLink" title="Official Site"
           />
         </Routes>
         <Footer />

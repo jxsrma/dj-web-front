@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "../css/about.css";
 
-function About() {
+function About(props) {
+  document.title = "JXSRMA | " + props.title;
   useEffect(() => {
     window.scrollTo({
         top: 0,

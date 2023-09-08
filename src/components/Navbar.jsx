@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import "../css/navbar.css";
 import logo from "../images/JXSRMA.png";
+import { useLocation } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
 // https://codepen.io/hitensharma/details/dybryGE
 function Navbar() {
   // const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("home");
-
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
+
+  const location = useLocation();
 
   return (
     <div>
@@ -20,9 +21,8 @@ function Navbar() {
           <div className="navbar-logo">
             <NavLink
               to="/"
-              className={active === "home" ? "nav-link-active" : ""}
+              className={location.pathname === "/" ? "nav-link-active" : ""}
               onClick={() => {
-                setActive("home");
                 setIsOpen(false);
               }}
             >
@@ -41,9 +41,8 @@ function Navbar() {
             <li className={isOpen ? "open" : ""}>
               <NavLink
                 to="/"
-                className={active === "home" ? "nav-link-active" : ""}
+                className={location.pathname === "/" ? "nav-link-active" : ""}
                 onClick={() => {
-                  setActive("home");
                   setIsOpen(false);
                 }}
               >
@@ -53,9 +52,10 @@ function Navbar() {
             <li className={isOpen ? "open" : ""}>
               <NavLink
                 to="/release"
-                className={active === "release" ? "nav-link-active" : ""}
+                className={
+                  location.pathname === "/release" ? "nav-link-active" : ""
+                }
                 onClick={() => {
-                  setActive("release");
                   setIsOpen(false);
                 }}
               >
@@ -65,9 +65,10 @@ function Navbar() {
             <li className={isOpen ? "open" : ""}>
               <NavLink
                 to="/about"
-                className={active === "about" ? "nav-link-active" : ""}
+                className={
+                  location.pathname === "/about" ? "nav-link-active" : ""
+                }
                 onClick={() => {
-                  setActive("about");
                   setIsOpen(false);
                 }}
               >
@@ -77,9 +78,10 @@ function Navbar() {
             <li className={isOpen ? "open" : ""}>
               <NavLink
                 to="/contact"
-                className={active === "contact" ? "nav-link-active" : ""}
+                className={
+                  location.pathname === "/contact" ? "nav-link-active" : ""
+                }
                 onClick={() => {
-                  setActive("contact");
                   setIsOpen(false);
                 }}
               >
@@ -94,7 +96,6 @@ function Navbar() {
         <div className="navbar-content">
           <ul>
             <NavLink to="/">
-              <img src={logo} alt="logo" className="navbar-logo" onClick={()=>setActive("home")} />
             </NavLink>
             <li>
               <NavLink to="/" className={ active === "home"?"navbar-content-active":""} onClick={()=>setActive("home")}>Home</NavLink>

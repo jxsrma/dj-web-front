@@ -3,8 +3,23 @@ import { Link } from "react-scroll";
 import "../css/music.css";
 import firestore from "./firebaseConfig/firebase";
 import { collection, getDocs } from "firebase/firestore";
+
+// Fetch Music Details
+
 function Music() {
-  const [year, setYear] = useState("latest");
+  // use effect
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    fetchData();
+    console.log(selectedYear);
+  }, []);
+
+  const [selectedYear, setSelectedYear] = useState("latest");
+
   const [allValue, setAllValue] = useState([]);
   const fetchData = async () => {
     try {
@@ -21,13 +36,8 @@ function Music() {
       console.error("Error: ", error);
     }
   };
-  useEffect(() => {
-    // window.scrollTo({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
-    fetchData();
-  }, []);
+
+  // group releases by year
 
   const releasesByYear = allValue.reduce((acc, release) => {
     const { year } = release;
@@ -48,12 +58,14 @@ function Music() {
           <li>
             <Link
               to="music-top"
-              className={year === "latest" ? "music-release-years-active" : ""}
+              className={
+                selectedYear === "latest" ? "music-release-years-active" : ""
+              }
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
-              onClick={() => setYear("latest")}
+              onClick={() => setSelectedYear("latest")}
             >
               Latest
             </Link>
@@ -63,13 +75,17 @@ function Music() {
               <Link
                 to={year}
                 className={
-                  year === { year } ? "music-release-years-active" : ""
+                  selectedYear === year
+                    ? "music-release-years-active"
+                    : console.log(year)
                 }
                 spy={true}
                 smooth={true}
                 offset={50}
                 duration={500}
-                onClick={() => setYear({ year })}
+                onClick={() => {
+                  setSelectedYear(year);
+                }}
               >
                 {year}
               </Link>
@@ -102,19 +118,21 @@ function Music() {
           <div className="music-year">{year}</div>
 
           <div className="music-card-grid">
-            {releasesByYear[year].map((release) => (
-              <div className="music-card">
-                <div className="music-image">
-                  <a
-                    href={release.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={release.album} alt="" />
-                  </a>
+            {releasesByYear[year]
+              .sort((a, b) => b.month - a.month)
+              .map((release) => (
+                <div className="music-card">
+                  <div className="music-image">
+                    <a
+                      href={release.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={release.album} alt="" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       ))}

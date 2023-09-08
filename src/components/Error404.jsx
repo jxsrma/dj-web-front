@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "../css/error404.css";
 import { NavLink } from "react-router-dom";
-function Error404() {
+function Error404(props) {
+  document.title = "JXSRMA | " + props.title;
   useEffect(() => {
     window.scrollTo({
       top: 0,

@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import "../css/support.css";
 import QR from "../images/PaymentQR.png";
-function Support() {
+function Support(props) {
+  document.title = "JXSRMA | " + props.title;
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -11,7 +13,7 @@ function Support() {
   return (
     <div className="support-main">
       <div className="support-text">
-        <h1>💰 Your support means the world to us! 💎🌟</h1>
+        <h1>💰 Your support means the world to me! 💎🌟</h1>
         <p>
           Creating music and sharing it with the world is our passion, and your
           financial support helps me continue to do what we love. 🎵🚀

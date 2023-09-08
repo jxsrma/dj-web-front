@@ -43,6 +43,22 @@
   color: white;
 }
 
+.contact-form span{
+  font-size: 1rem;
+  color: gray;
+}
+
+.contact-form span a{
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s ease;
+}
+
+.contact-form span a:hover{
+  color: white;
+}
+
+
 .contact-form form {
   background-color: rgb(20, 20, 20);
   width: 40vw;

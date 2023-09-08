@@ -4,7 +4,8 @@ import { collection, addDoc } from "firebase/firestore";
 
 import "../css/contact.css";
 
-function Contact() {
+function Contact(props) {
+  document.title = "JXSRMA | " + props.title;
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -124,6 +125,18 @@ function Contact() {
               SEND
             </button>
           </div>
+          <span>
+            E-mail 📧: <a href="mailto:jxsrma@gmail.com">jxsrma@gmail.com</a>
+            <br />
+            DM me on my{" "}
+            <a
+              href="https://www.flowcode.com/page/jxsrma"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Socials 📱
+            </a>
+          </span>
         </form>
       </div>
     </div>

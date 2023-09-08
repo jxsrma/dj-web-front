@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import "../css/home.css";
 import Youtube from "./Youtube";
 
-function Home() {
+function Home(props) {
+  document.title = "JXSRMA | " + props.title;
   useEffect(() => {
     window.scrollTo({
       top: 0,
