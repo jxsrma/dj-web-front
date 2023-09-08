@@ -29,7 +29,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function Main() {
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Router>
         <Navbar />
         {/* <Home />
