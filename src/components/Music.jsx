@@ -1,14 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "../css/music.css";
+import firestore from "./firebaseConfig/firebase";
+import { collection, getDocs } from "firebase/firestore";
 function Music() {
   const [year, setYear] = useState("latest");
+  const [allValue, setAllValue] = useState([]);
+  const fetchData = async () => {
+    try {
+      const colRef = collection(firestore, "music");
+      const querySnapshot = await getDocs(colRef);
+
+      const fetchData = [];
+      querySnapshot.forEach((doc) => {
+        const musicData = doc.data();
+        fetchData.push({ id: doc.id, ...musicData });
+      });
+      setAllValue(fetchData);
+    } catch (error) {
+      console.error("Error: ", error);
+    }
+  };
   useEffect(() => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-}, [])
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
+    fetchData();
+  }, []);
+
+  const releasesByYear = allValue.reduce((acc, release) => {
+    const { year } = release;
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(release);
+    return acc;
+  }, {});
+
+  const sortedYears = Object.keys(releasesByYear).sort((a, b) => b - a);
 
   return (
     <div className="music-container" id="music-top">
@@ -28,71 +58,23 @@ function Music() {
               Latest
             </Link>
           </li>
-          <li>
-            <Link
-              to="2023"
-              className={year === "2023" ? "music-release-years-active" : ""}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={() => setYear("2023")}
-            >
-              2023
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="2022"
-              className={year === "2022" ? "music-release-years-active" : ""}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={() => setYear("2022")}
-            >
-              2022
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="2021"
-              className={year === "2021" ? "music-release-years-active" : ""}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={() => setYear("2021")}
-            >
-              2021
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="2020"
-              className={year === "2020" ? "music-release-years-active" : ""}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={() => setYear("2020")}
-            >
-              2020
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="2019"
-              className={year === "2019" ? "music-release-years-active" : ""}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={() => setYear("2019")}
-            >
-              2019
-            </Link>
-          </li>
+          {sortedYears.map((year) => (
+            <li>
+              <Link
+                to={year}
+                className={
+                  year === { year } ? "music-release-years-active" : ""
+                }
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onClick={() => setYear({ year })}
+              >
+                {year}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -101,7 +83,7 @@ function Music() {
         <div className="music-year">Latest</div>
         <div className="music-card-grid">
           <div className="music-card">
-            <div className="music-image" style={{ paddingTop: "2vh" }}>
+            <div className="music-iframe">
               <iframe
                 src="https://www.youtube.com/embed/fPWfTaDFaLg"
                 title="JXSRMA - Athena"
@@ -113,164 +95,29 @@ function Music() {
           </div>
         </div>
       </div>
-      <div className="music-container-card" id="2023">
-        <div className="year-heading">2023</div>
-        <div className="music-year">2023</div>
-        <div className="music-card-grid">
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="music-container-card" id="2022">
-        <div className="year-heading">2022</div>
-        <div className="music-year">2022</div>
-        <div className="music-card-grid">
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+      {sortedYears.map((year) => (
+        <div className="music-container-card" id={year}>
+          <div className="year-heading">{year}</div>
+          <div className="music-year">{year}</div>
 
-      <div className="music-container-card" id="2021">
-        <div className="year-heading">2021</div>
-        <div className="music-year">2021</div>
-        <div className="music-card-grid">
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
+          <div className="music-card-grid">
+            {releasesByYear[year].map((release) => (
+              <div className="music-card">
+                <div className="music-image">
+                  <a
+                    href={release.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={release.album} alt="" />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-
-      <div className="music-container-card" id="2020">
-        <div className="year-heading">2020</div>
-        <div className="music-year">2020</div>
-        <div className="music-card-grid">
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="music-container-card" id="2019">
-        <div className="year-heading">2019</div>
-        <div className="music-year">2019</div>
-        <div className="music-card-grid">
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-          <div className="music-card">
-            <div className="music-image">
-              <img src="https://i.ibb.co/Lhczqwj/unknown.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
