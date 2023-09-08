@@ -1,0 +1,90 @@
+.support-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/JXSRMADPWBG.png");
+  background-size: 50px;
+  animation: move 30s linear infinite;
+  color: white;
+  padding: 10px;
+}
+
+.support-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 40vw;
+}
+.support-text h1 {
+  width: 30vw;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.support-text p {
+  width: 30vw;
+  text-align: justify;
+  padding-top: 0;
+  font-size: 2vh;
+  background-color: rgb(20, 20, 20);
+}
+
+.support-donate {
+  display: flex;
+  gap: 3vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 40vw;
+  /* text-align: center; */
+}
+.support-donate h1 {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.support-donate h1 img {
+  height: 1.5rem;
+}
+.support-donate img {
+  height: 20vh;
+}
+.support-donate p {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 20vw;
+  background-color: rgb(20, 20, 20);
+}
+
+.support-donate p a {
+  width: 20vw;
+  text-decoration: none;
+  color: white;
+}
+.support-donate p span {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .support-main {
+    padding-top: 10vh;
+    grid-template-columns: auto;
+  }
+  .support-text h1 {
+    width: 80vw;
+    text-align: center;
+  }
+  .support-text p {
+    width: 70vw;
+  } 
+  .support-donate p  {
+    width: 70vw;
+  }  
+}

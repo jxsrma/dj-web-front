@@ -17,6 +17,12 @@ import Music from "./Music";
 import Loading from "./Loading";
 // eslint-disable-next-line
 import Contact from "./Contact";
+// eslint-disable-next-line
+import Error404 from "./Error404";
+// eslint-disable-next-line
+import Support from "./Support";
+// eslint-disable-next-line
+import Login from "./admin/Login";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -43,7 +49,7 @@ function Main() {
             path="/release"
             element={<Releases />} //active="activeLink" title="Official Site"
           />
-{/* 
+          {/* 
           <Route
             exact
             path="/music"
@@ -59,6 +65,19 @@ function Main() {
             exact
             path="/about"
             element={<About />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            exact
+            path="/support"
+            element={<Support />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            path="/admin"
+            element={<Login />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            path="/*"
+            element={<Error404 />} //active="activeLink" title="Official Site"
           />
         </Routes>
         <Footer />

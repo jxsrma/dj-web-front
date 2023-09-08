@@ -75,6 +75,7 @@
 }
 .form-field input:focus{
   outline: none;
+  border-bottom: 1px solid white;
 }
 
 .form-field textarea {
@@ -93,6 +94,7 @@
 
 .form-field textarea:focus{
   outline: none;
+  border-bottom: 1px solid white;
 }
 
 .contact-send-btn {
@@ -110,6 +112,8 @@
   background-color: white;
   color: rgb(20, 20, 20);
 }
+
+
 
 @keyframes move {
   0% {

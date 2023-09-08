@@ -26,7 +26,9 @@ function Youtube() {
           <p>
             Welcome to the official YouTube channel of JXSRMA! 🔥 Dive into a
             world of electrifying beats, futuristic melodies, and captivating
-            sounds. 🎶 JXSRMA is a talented music producer and artist, pushing
+            sounds. 
+            </p>
+            <p>🎶 JXSRMA is a talented music producer and artist, pushing
             the boundaries of electronic music genres.
           </p>
           <p>

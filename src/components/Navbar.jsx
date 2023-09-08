@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "../css/navbar.css";
 import logo from "../images/JXSRMA.png";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // https://codepen.io/hitensharma/details/dybryGE
 function Navbar() {
   // const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("home");
-  const [hcontainer, setNavbar] = useState(false);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
@@ -19,9 +18,16 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-content">
           <div className="navbar-logo">
-            <a href="#home" onClick={() => setActive("home")}>
+            <NavLink
+              to="/"
+              className={active === "home" ? "nav-link-active" : ""}
+              onClick={() => {
+                setActive("home");
+                setIsOpen(false);
+              }}
+            >
               <img src={logo} alt="Logo" />
-            </a>
+            </NavLink>
           </div>
           <div
             className={`navbar-hamburger ${isOpen ? "toggle" : ""}`}

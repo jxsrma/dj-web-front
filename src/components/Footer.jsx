@@ -1,10 +1,10 @@
 import React from "react";
 import "../css/footer.css";
+import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer-main">
       <div className="footer-row">
-
         <div className="footer-col">
           <h4>Follow</h4>
           <ul>
@@ -14,10 +14,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-instagram"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-instagram"></i>
                 Instagram
               </a>
             </li>
@@ -27,24 +24,8 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-youtube"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-youtube"></i>
                 YouTube
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://facebook.com/JXSRMA"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i
-                  className="fab fa-facebook"
-                  style={{ marginRight: "10px" }}
-                ></i>
-                Facebook
               </a>
             </li>
             <li>
@@ -53,11 +34,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-x-twitter"
-                  style={{ marginRight: "10px" }}
-                ></i>
-                X
+                <i className="fab fa-x-twitter"></i>X
               </a>
             </li>
             <li>
@@ -66,10 +43,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-discord"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-discord"></i>
                 Discord
               </a>
             </li>
@@ -79,10 +53,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-twitch"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-twitch"></i>
                 Twitch
               </a>
             </li>
@@ -97,10 +68,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-spotify"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-spotify"></i>
                 Spotify
               </a>
             </li>
@@ -110,10 +78,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-soundcloud"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-soundcloud"></i>
                 SoundCloud
               </a>
             </li>
@@ -123,10 +88,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-amazon"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-amazon"></i>
                 Amazon
               </a>
             </li>
@@ -136,7 +98,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-apple" style={{ marginRight: "10px" }}></i>
+                <i className="fab fa-apple"></i>
                 Apple
               </a>
             </li>
@@ -146,27 +108,21 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fas fa-headphones"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fas fa-headphones"></i>
                 JioSaavan & more
               </a>
             </li>
           </ul>
         </div>
         <div className="footer-col">
-          <h4>Info</h4>
+          <h4>More</h4>
           <ul>
             {/* <li><Link to="/contact"><i className="fas fa-headset" style={{marginRight: "10px"}}></i>Contact Us</Link></li> */}
             <li>
-              <a href="mailto: jxsrma@gmail.com">
-                <i
-                  class="fa-regular fa-envelope"
-                  style={{ marginRight: "10px" }}
-                ></i>
+              <NavLink to="/contact">
+                <i class="fa-regular fa-envelope"></i>
                 Send Email
-              </a>
+              </NavLink>
             </li>
             <li>
               <a
@@ -174,7 +130,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fas fa-code" style={{ marginRight: "10px" }}></i>
+                <i className="fas fa-code"></i>
                 About Developer
               </a>
             </li>
@@ -184,12 +140,18 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fab fa-github"
-                  style={{ marginRight: "10px" }}
-                ></i>
+                <i className="fab fa-github"></i>
                 Github Repo
               </a>
+            </li>
+            <li>
+              <NavLink
+                to="/support"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-hand-holding-dollar"></i>
+                Support Me
+              </NavLink>
             </li>
           </ul>
         </div>
