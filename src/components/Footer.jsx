@@ -145,12 +145,11 @@ function Footer() {
               </a>
             </li>
             <li>
-              <NavLink
-                to="/support"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-solid fa-hand-holding-dollar"></i>
-                Support Me
+              <NavLink to="/support" rel="noopener noreferrer">
+                <span className="gold">
+                  <i className="fa-solid fa-hand-holding-dollar"></i>
+                  Support Me
+                </span>
               </NavLink>
             </li>
           </ul>
