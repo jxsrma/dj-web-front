@@ -1,4 +1,4 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
 import Navbar from "./Navbar";
 // eslint-disable-next-line
@@ -8,11 +8,11 @@ import About from "./About";
 // eslint-disable-next-line
 import Footer from "./Footer";
 // eslint-disable-next-line
-import Youtube from "./Youtube";
+// import Youtube from "./Youtube";
 // eslint-disable-next-line
 import Releases from "./Releases";
 // eslint-disable-next-line
-import Music from "./Music";
+// import Music from "./Music";
 // eslint-disable-next-line
 import Loading from "./Loading";
 // eslint-disable-next-line
@@ -22,62 +22,52 @@ import Error404 from "./Error404";
 // eslint-disable-next-line
 import Support from "./Support";
 // eslint-disable-next-line
-import Login from "./admin/Login";
+// import Login from "./admin/Login";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "../css/main.css";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function Main() {
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       <Router>
         <Navbar />
-        {/* <Home />
-      <Youtube />
-      <Releases />
-      <About />
-      <Music/> */}
         <Routes>
           <Route
             exact
             path="/"
-            element={<Home title="Official Site 🏠"/>} //active="activeLink" title="Official Site"
+            element={<Home title="Official Site 🏠" />} //active="activeLink" title="Official Site"
           />
 
           <Route
             exact
             path="/release"
-            element={<Releases title="Releases 🎶"/>} //active="activeLink" title="Official Site"
+            element={<Releases title="Releases 🎶" />} //active="activeLink" title="Official Site"
           />
-          {/* 
-          <Route
-            exact
-            path="/music"
-            element={<Music />} //active="activeLink" title="Official Site"
-          /> */}
-
           <Route
             exact
             path="/Contact"
-            element={<Contact title="Contact 📩"/>} //active="activeLink" title="Official Site"
+            element={<Contact title="Contact 📩" />} //active="activeLink" title="Official Site"
           />
           <Route
             exact
             path="/about"
-            element={<About title="About 📖"/>} //active="activeLink" title="Official Site"
+            element={<About title="About 📖" />} //active="activeLink" title="Official Site"
           />
           <Route
             exact
             path="/support"
-            element={<Support title="Support 💰"/>} //active="activeLink" title="Official Site"
+            element={<Support title="Support 💰" />} //active="activeLink" title="Official Site"
           />
-          {/* <Route
-            path="/admin"
-            element={<Login />} //active="activeLink" title="Official Site"
-          /> */}
           <Route
             path="/*"
-            element={<Error404 title="Error 🚧"/>} //active="activeLink" title="Official Site"
+            element={<Error404 title="Error 🚧" />} //active="activeLink" title="Official Site"
           />
         </Routes>
         <Footer />

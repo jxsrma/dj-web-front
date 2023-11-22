@@ -16,7 +16,9 @@ function Loading() {
   return (
     <div>
       <div className={`loading-screen ${isLoading ? "loading-show" : ""}`}>
-        <div className="loader">loading</div>
+        <div className="loader">
+        Loading
+        </div>
       </div>
     </div>
   );

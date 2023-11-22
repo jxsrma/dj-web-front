@@ -51,6 +51,7 @@
 .contact-form span a{
   text-decoration: none;
   color: gray;
+  font-weight: bold;
   transition: 0.5s ease;
 }
 
@@ -141,6 +142,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .contact-form{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+  }
   .contact-heading h1 {
     font-size: 2.5rem;
   }

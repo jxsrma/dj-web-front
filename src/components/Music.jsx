@@ -15,7 +15,7 @@ function Music() {
       behavior: "smooth",
     });
     fetchData();
-    console.log(selectedYear);
+    // console.log(selectedYear);
   }, []);
 
   const [selectedYear, setSelectedYear] = useState("latest");
@@ -77,7 +77,7 @@ function Music() {
                 className={
                   selectedYear === year
                     ? "music-release-years-active"
-                    : console.log(year)
+                    : "" //console.log(year)
                 }
                 spy={true}
                 smooth={true}

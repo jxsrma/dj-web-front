@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/navbar.css";
 import logo from "../images/JXSRMA.png";
+import support from "../images/support.png";
 import { useLocation } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
@@ -89,6 +90,22 @@ function Navbar() {
               </NavLink>
             </li>
           </ul>
+          {window.location.pathname === "/support" ? (
+                ""
+              ) : (
+                <NavLink
+                to="/support"
+                className={
+                  location.pathname === "/contact" ? "nav-link-active cont-support-icon" : "cont-support-icon"
+                }
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
+                <img className="support-icon" src={support} alt="" />
+                <div class="img-overlay"></div>
+              </NavLink>
+              )}
         </div>
       </nav>
 

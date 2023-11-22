@@ -111,7 +111,6 @@
 }
 
 .music-iframe iframe:hover {
-
   box-shadow: 0px 0px 50px rgb(100, 100, 100);
 }
 .music-image img {
@@ -127,6 +126,7 @@
   opacity: unset;
   filter: unset;
   box-shadow: 0px 0px 50px rgb(100, 100, 100);
+  transform: scale(1.02,1.02);
 }
 
 .music-image p {

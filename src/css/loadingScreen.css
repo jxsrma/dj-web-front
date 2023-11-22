@@ -24,6 +24,7 @@
   /* text-align: center; */
   font-weight: 500;
   font-size: 40%;
+  /* font-size: 5rem; */
   animation: fontSize 2s ease infinite;
   text-transform: uppercase;
   mix-blend-mode: difference;
