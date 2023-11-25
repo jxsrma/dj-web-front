@@ -40,7 +40,7 @@ function Contact(props) {
         message,
       });
 
-      alert("Data Stored with ID: " + docRef.id);
+      alert("Your Message is been send Successfully!");
 
       setUserData({
         name: "",
