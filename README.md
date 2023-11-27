@@ -30,7 +30,7 @@ Discover the enchanting world of JXSRMA, where artistic expression knows no boun
 
 ## 🚀 Getting Started
 
-1. **Clone the Repository:**
+1. **Clone this Repository:**
 
    ```bash
    git clone https://github.com/jxsrma/dj-web-front.git
