@@ -4,6 +4,8 @@ import Youtube from "./Youtube";
 
 function Home(props) {
   document.title = "JXSRMA | " + props.title;
+  let va1 = process.env.REACT_APP_HELLO_WORLD
+  console.log(va1 + "??");
   useEffect(() => {
     window.scrollTo({
       top: 0,

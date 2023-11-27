@@ -1,12 +1,11 @@
-import firebase from 'firebase'
+import firebase from "firebase";
 const firebaseConfig = {
-    apiKey: "AIzaSyC1H8fCwRimI7VG2-kR1QV54WRq-hGRgj8",
-    authDomain: "jxsrma-c90d7.firebaseapp.com",
-    databaseURL: "https://jxsrma-c90d7-default-rtdb.firebaseio.com",
-    projectId: "jxsrma-c90d7",
-    storageBucket: "jxsrma-c90d7.appspot.com",
-    messagingSenderId: "652429730769",
-    appId: "1:652429730769:web:bc7978972b8b8816daf6f0",
-    measurementId: "G-9JV81P5E85"
-  };
-  
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+};

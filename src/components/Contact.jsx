@@ -42,6 +42,16 @@ function Contact(props) {
 
       alert("Your Message is been send Successfully!");
 
+    //   const config = {
+    //     SecureToken : process.env.REACT_APP_MAIL_SECURE_TOKEN,
+    //     To : email,
+    //     From : process.env.REACT_APP_MAIL_USERNAME,
+    //     Subject : subject,
+    //     Body : message
+    // };
+
+    // window.Email.send(config).then(()=> alert("Sent Success"));
+
       setUserData({
         name: "",
         email: "",
