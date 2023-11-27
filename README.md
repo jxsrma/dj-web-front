@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<center>
+<a href = 'https://jxsrma.herokuapp.com'>
+<img src="https://i.ibb.co/Rztmh4g/JXSRMA.png" alt="drawing" width="300"/>
+</a>
+</center>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+# JXSRMA Offical Website
 
-In the project directory, you can run:
+This website is an Artist Profile Website.
 
-### `npm start`
+<!-- ## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User can send Demo & Query direct to admin.
+- After submittion, User will get a confirmation Email.
+- Admin can upload Images and released cover art via Django Admin Pannel. -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# JXSRMA Website 🚀
 
-### `npm test`
+Welcome to the JXSRMA Website GitHub repository! 🎉 This dynamic web application is designed to redefine the way artists showcase their work by seamlessly blending the realms of music and visual artistry. Explore the magic of JXSRMA and embark on a journey through the symphony of creativity!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🌟 Features
 
-### `npm run build`
+- **Seamless Integration:** Immerse yourself in the artist's musical journey as it harmoniously intertwines with captivating visual elements.
+- **Immersive Visuals:** Experience a gallery of curated images that amplify the artist's creative essence, creating a visual feast for enthusiasts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User-Friendly Interface:** Navigate the website effortlessly with an intuitive interface designed to enhance your exploration of the artist's universe.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Engagement and Connectivity:** Forge a profound connection with the artist, bridging the gap between their creativity and your appreciation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Explore the Artist's Odyssey
 
-### `npm run eject`
+Discover the enchanting world of JXSRMA, where artistic expression knows no bounds. This platform encapsulates the artist's narrative, creating a captivating space for enthusiasts and aficionados alike.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Technologies
+    React.js
+    Firebase
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the Repository:**
 
-## Learn More
+   ```bash
+   git clone https://github.com/jxsrma/dj-web-front.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   `npm install`
+   Installs all important packages
 
-### Code Splitting
+   `npm start`
+   Starts the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   `npm run build`
+   Create build for hosting on firebasee
 
-### Analyzing the Bundle Size
+   `firebase deploy`
+   Deployes the build package in firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Explore the Codebase:**
+   Dive into the codebase and explore the innovative techniques used to craft this immersive platform.
 
-### Making a Progressive Web App
+4. **Contribute:**
+   We welcome contributions! Feel free to submit a pull request and be a part of shaping the future of JXSRMA.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Live Demo
 
-### Advanced Configuration
+Immerse yourself in the artist's world through the live demonstration of the JXSRMA website. [Explore Now](https://jxsrma.web.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📧 Contact Us
 
-### Deployment
+For inquiries, collaborations, and engagements, reach out to us at [jashsharma619@gmail.com](mailto:jashsharma619@gmail.com).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Let the JXSRMA website redefine how you perceive and connect with art. Experience artistry reimagined! 🎨🎶✨
 
-### `npm run build` fails to minify
+&copy; Copyright 2023, JXSRMA 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<center>
+<table style="border : 0;">
+<tr>
+
+<td>
+<a href = 'https://jxsrma.openinapp.co/youtube/11fe3'>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" width="30"/>
+</a>
+</td>
+
+<td>
+<a href = 'https://jxsrma.openinapp.co/instagram/jxsrma'>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" width="25"/>
+</a>
+</td>
+
+<td>
+<a href = 'https://jxsrma.openinapp.co/facebook/c0972'>
+<img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="Facebook Page" width="25"/>
+</a>
+</td>
+
+<td>
+<a href = 'https://jxsrma.openinapp.co/twitter/jxsrma'>
+<img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="Twitter" width="30"/>
+</a>
+</td>
+
+<td>
+<a href = 'https://www.linkedin.com/in/jashsharma/'>
+<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Linkedin" width="25"/>
+</a>
+</td>
+
+</tr>
+</table>
+</center>
