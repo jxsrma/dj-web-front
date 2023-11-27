@@ -6,17 +6,7 @@
 
 <br>
 
-# JXSRMA Offical Website
-
-This website is an Artist Profile Website.
-
-<!-- ## Features
-
-- User can send Demo & Query direct to admin.
-- After submittion, User will get a confirmation Email.
-- Admin can upload Images and released cover art via Django Admin Pannel. -->
-
-# JXSRMA Website 🚀
+# JXSRMA Offical Website 🚀
 
 Welcome to the JXSRMA Website GitHub repository! 🎉 This dynamic web application is designed to redefine the way artists showcase their work by seamlessly blending the realms of music and visual artistry. Explore the magic of JXSRMA and embark on a journey through the symphony of creativity!
 
@@ -34,8 +24,8 @@ Welcome to the JXSRMA Website GitHub repository! 🎉 This dynamic web applicati
 Discover the enchanting world of JXSRMA, where artistic expression knows no bounds. This platform encapsulates the artist's narrative, creating a captivating space for enthusiasts and aficionados alike.
 
 ## ⚙️ Technologies
-    React.js
-    Firebase
+- React.js
+- Firebase
 
 
 ## 🚀 Getting Started
@@ -46,7 +36,7 @@ Discover the enchanting world of JXSRMA, where artistic expression knows no boun
    git clone https://github.com/jxsrma/dj-web-front.git
    ```
 
-2. Installation
+2. **Installation**
 
    `npm install`
    Installs all important packages
@@ -74,7 +64,7 @@ Immerse yourself in the artist's world through the live demonstration of the JXS
 
 For inquiries, collaborations, and engagements, reach out to us at [jashsharma619@gmail.com](mailto:jashsharma619@gmail.com).
 
-Let the JXSRMA website redefine how you perceive and connect with art. Experience artistry reimagined! 🎨🎶✨
+Let this website redefine how you perceive and connect with art. Experience *artistry reimagined!* 🎨🎶✨
 
 &copy; Copyright 2023, JXSRMA 
 
