@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../css/releases.css";
-import Music from "./Music";
+import Music from "../music/Music";
 
 function Releases(props) {
   document.title = "JXSRMA | " + props.title;

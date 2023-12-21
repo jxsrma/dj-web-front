@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../css/home.css";
-import Youtube from "./Youtube";
+import Youtube from "../youtube/Youtube";
 
 function Home(props) {
   document.title = "JXSRMA | " + props.title;
