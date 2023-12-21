@@ -1,41 +1,38 @@
 // import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 // eslint-disable-next-line
-import Home from "./Home";
+import Home from "./home/Home";
 // eslint-disable-next-line
-import About from "./About";
+import About from "./about/About";
 // eslint-disable-next-line
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 // eslint-disable-next-line
 // import Youtube from "./Youtube";
 // eslint-disable-next-line
-import Releases from "./Releases";
+import Releases from "./releases/Releases";
 // eslint-disable-next-line
 // import Music from "./Music";
 // eslint-disable-next-line
-import Loading from "./Loading";
+import Loading from "./loading/Loading";
 // eslint-disable-next-line
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
 // eslint-disable-next-line
-import Error404 from "./Error404";
+import Error404 from "./error404/Error404";
 // eslint-disable-next-line
-import Support from "./Support";
+import Support from "./support/Support";
 // eslint-disable-next-line
 // import Login from "./admin/Login";
 
 import "../css/main.css";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./admin/Login";
 
 function Main() {
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Router>
         <Navbar />
         <Routes>
@@ -44,7 +41,6 @@ function Main() {
             path="/"
             element={<Home title="Official Site 🏠" />} //active="activeLink" title="Official Site"
           />
-
           <Route
             exact
             path="/release"
@@ -64,6 +60,11 @@ function Main() {
             exact
             path="/support"
             element={<Support title="Support 💰" />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            exact
+            path="/admin"
+            element={<Login title="Support 💰" />} //active="activeLink" title="Official Site"
           />
           <Route
             path="/*"
