@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "../css/support.css";
-import QR from "../images/PaymentQR.png";
+import "./support.css";
+import QR from "../../images/PaymentQR.png";
 function Support(props) {
   document.title = "JXSRMA | " + props.title;
 

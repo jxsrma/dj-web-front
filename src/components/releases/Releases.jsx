@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/releases.css";
+import "./releases.css";
 import Music from "../music/Music";
 
 function Releases(props) {

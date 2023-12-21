@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/loadingScreen.css";
+import "./loadingScreen.css";
 
 function Loading() {
   // Create a state variable to control when to hide the loading screen

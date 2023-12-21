@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/about.css";
+import "./about.css";
 
 function About(props) {
   document.title = "JXSRMA | " + props.title;

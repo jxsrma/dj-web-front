@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/home.css";
+import "./home.css";
 import Youtube from "../youtube/Youtube";
 
 function Home(props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/youtube.css";
+import "./youtube.css";
 // import Fade from 'react-reveal'
 
 function Youtube() {

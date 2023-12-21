@@ -24,7 +24,7 @@
 
 .youtube-content {
   background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 1)),
-    url("../images/JXSRMADPWBG.png");
+    url("../../images/JXSRMADPWBG.png");
   background-size: 7vh;
   padding-bottom: 10vh;
   transition: 0.5s ease;
@@ -71,8 +71,8 @@
 }
 
 @media screen and (max-width: 800px) {
-  .youtube-main-gallery iframe {
-  }
+  /* .youtube-main-gallery iframe {
+  } */
   .youtube-para {
   width: 80vw;
 

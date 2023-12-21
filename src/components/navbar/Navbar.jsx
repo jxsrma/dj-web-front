@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/navbar.css";
-import logo from "../images/JXSRMA.png";
-import support from "../images/support.png";
+import "./navbar.css";
+import logo from "../../images/JXSRMA.png";
+import support from "../../images/support.png";
 import { useLocation } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";

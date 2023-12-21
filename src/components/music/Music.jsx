@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import "../css/music.css";
+import "./music.css";
 import firestore from "../firebaseConfig/firebase";
 import { collection, getDocs } from "firebase/firestore";
 

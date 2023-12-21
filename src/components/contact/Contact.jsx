@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import firestore from "../firebaseConfig/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-import "../css/contact.css";
+import "./contact.css";
 
 function Contact(props) {
   document.title = "JXSRMA | " + props.title;

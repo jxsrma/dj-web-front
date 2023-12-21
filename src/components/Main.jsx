@@ -24,7 +24,7 @@ import Support from "./support/Support";
 // eslint-disable-next-line
 // import Login from "./admin/Login";
 
-import "../css/main.css";
+import "./main.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./admin/Login";
