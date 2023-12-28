@@ -197,7 +197,7 @@
   width: 2rem;
   filter: grayscale(1);
   transition: 0.5s ease;
-  animation: size 2.5s ease-in-out infinite;
+  animation: size 5s ease-in-out infinite;
   animation-play-state: running;
 }
 

@@ -1,7 +1,7 @@
 // require('dotenv').config();
 
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 // Initialize Firebase using environment variables
 const firebaseConfig = {

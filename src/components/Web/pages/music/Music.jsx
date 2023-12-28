@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./music.css";
-import firestore from "../firebaseConfig/firebase";
+import firestore from "../../../firebaseConfig/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import {
+  groupReleasesByYear,
+  getSortedYears,
+} from "../../../../functions/musicUtils";
 
 // Fetch Music Details
 
@@ -39,17 +43,8 @@ function Music() {
 
   // group releases by year
 
-  const releasesByYear = allValue.reduce((acc, release) => {
-    const { year } = release;
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(release);
-    return acc;
-  }, {});
-
-  const sortedYears = Object.keys(releasesByYear).sort((a, b) => b - a);
-
+  const releasesByYear = groupReleasesByYear(allValue);
+  const sortedYears = getSortedYears(releasesByYear);
   return (
     <div className="music-container" id="music-top">
       <div className="music-heading">All Releases</div>
@@ -75,9 +70,7 @@ function Music() {
               <Link
                 to={year}
                 className={
-                  selectedYear === year
-                    ? "music-release-years-active"
-                    : "" //console.log(year)
+                  selectedYear === year ? "music-release-years-active" : "" //console.log(year)
                 }
                 spy={true}
                 smooth={true}
@@ -103,9 +96,8 @@ function Music() {
               <iframe
                 src="https://www.youtube.com/embed/fPWfTaDFaLg"
                 title="JXSRMA - Athena"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                frameBorder={0}
               ></iframe>
             </div>
           </div>

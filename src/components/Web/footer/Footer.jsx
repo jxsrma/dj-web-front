@@ -120,7 +120,7 @@ function Footer() {
             {/* <li><Link to="/contact"><i className="fas fa-headset" style={{marginRight: "10px"}}></i>Contact Us</Link></li> */}
             <li>
               <NavLink to="/contact">
-                <i class="fa-regular fa-envelope"></i>
+                <i className="fa-regular fa-envelope"></i>
                 Send Email
               </NavLink>
             </li>

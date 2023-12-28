@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import "./home.css";
-import Youtube from "../youtube/Youtube";
+import "./home.css"
+import Youtube from "../../youtube/Youtube";
 
 function Home(props) {
   document.title = "JXSRMA | " + props.title;
-  let va1 = process.env.REACT_APP_HELLO_WORLD
-  console.log(va1 + "??");
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -22,11 +20,10 @@ function Home(props) {
         <iframe
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/artist/76RdxImQYMELfBJ99W7QsE?utm_source=generator&theme=0"
-          frameBorder="0"
-          allowFullScreen=""
           title="Spotify"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          frameBorder={0}w
         ></iframe>
         <div className="home-social">
           <a
@@ -34,28 +31,28 @@ function Home(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-instagram fa-2xl"></i>
+            <i className="fa-brands fa-instagram fa-2xl"></i>
           </a>
           <a
             href="https://www.youtube.com/@jxsrma"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-youtube fa-2xl"></i>
+            <i className="fa-brands fa-youtube fa-2xl"></i>
           </a>
           <a
             href="https://twitter.com/jxsrma"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-x-twitter fa-2xl"></i>
+            <i className="fa-brands fa-x-twitter fa-2xl"></i>
           </a>
           <a
             href="https://www.twitch.tv/jxsrma"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-twitch fa-2xl"></i>
+            <i className="fa-brands fa-twitch fa-2xl"></i>
           </a>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import logo from "../../images/JXSRMA.png";
-import support from "../../images/support.png";
+import logo from "../../../images/JXSRMA.png";
+import support from "../../../images/support.png";
 import { useLocation } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
@@ -103,7 +103,7 @@ function Navbar() {
                 }}
               >
                 <img className="support-icon" src={support} alt="" />
-                <div class="img-overlay"></div>
+                <div className="img-overlay"></div>
               </NavLink>
               )}
         </div>

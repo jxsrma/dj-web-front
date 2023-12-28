@@ -30,7 +30,7 @@
   color: grey;
   text-decoration: none;
   transition: 0.5s ease;
-} 
+}
 .music-release-years ul li :hover {
   color: white;
   text-shadow: 0px 0px 10px white;
@@ -48,9 +48,12 @@
   display: flex;
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)),
-    url("../../images/JXSRMADPWBG.png");
+    url("../../../../images/JXSRMADPWBG.png");
   background-size: 50px;
+  
 }
+
+
 
 #latest {
   padding-top: 0;
@@ -102,7 +105,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  
 }
 .music-iframe iframe {
   width: calc(1280px / 1.5);
@@ -119,14 +121,15 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   filter: grayscale(0.9);
   transition: 0.5s ease;
+  animation: fade-in ease-in-out;
+  animation-timeline: view(80vh 0vh);
 }
-
 
 .music-image img:hover {
   opacity: unset;
   filter: unset;
   box-shadow: 0px 0px 50px rgb(100, 100, 100);
-  transform: scale(1.02,1.02);
+  transform: scale(1.02, 1.02);
 }
 
 .music-image p {
@@ -134,6 +137,17 @@
   padding: 0;
   transform: translate(3vh, -7vh);
   mix-blend-mode: difference;
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -198,4 +212,4 @@
   }
 }
 
- /* animation: move 30s linear infinite; */
+/* animation: move 30s linear infinite; */

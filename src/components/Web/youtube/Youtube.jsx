@@ -17,19 +17,19 @@ function Youtube() {
           <iframe
             src="https://www.youtube.com/embed/fPWfTaDFaLg"
             title="JXSRMA - Athena"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            frameBorder={0}
           ></iframe>
         </div>
         <div className="youtube-para">
           <p>
             Welcome to the official YouTube channel of JXSRMA! 🔥 Dive into a
             world of electrifying beats, futuristic melodies, and captivating
-            sounds. 
-            </p>
-            <p>🎶 JXSRMA is a talented music producer and artist, pushing
-            the boundaries of electronic music genres.
+            sounds.
+          </p>
+          <p>
+            🎶 JXSRMA is a talented music producer and artist, pushing the
+            boundaries of electronic music genres.
           </p>
           <p>
             Subscribe now and hit the notification bell 🔔 to never miss a beat!

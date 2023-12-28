@@ -1,38 +1,37 @@
 // import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
-import Navbar from "./navbar/Navbar";
+import Navbar from "./Web/navbar/Navbar";
 // eslint-disable-next-line
-import Home from "./home/Home";
+import Home from "./Web/pages/home/Home";
 // eslint-disable-next-line
-import About from "./about/About";
+import About from "./Web/pages/about/About";
 // eslint-disable-next-line
-import Footer from "./footer/Footer";
+import Footer from "./Web/footer/Footer";
 // eslint-disable-next-line
 // import Youtube from "./Youtube";
 // eslint-disable-next-line
-import Releases from "./releases/Releases";
+import Releases from "./Web/pages/releases/Releases";
 // eslint-disable-next-line
 // import Music from "./Music";
 // eslint-disable-next-line
-import Loading from "./loading/Loading";
 // eslint-disable-next-line
-import Contact from "./contact/Contact";
+import Contact from "./Web/pages/contact/Contact";
 // eslint-disable-next-line
-import Error404 from "./error404/Error404";
+import Error404 from "./Web/pages/error404/Error404";
 // eslint-disable-next-line
-import Support from "./support/Support";
+import Support from "./Web/pages/support/Support";
 // eslint-disable-next-line
 // import Login from "./admin/Login";
+import Admin from "./admin/Admin";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./main.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./admin/Login";
-
 function Main() {
+
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       <Router>
         <Navbar />
         <Routes>
@@ -63,8 +62,8 @@ function Main() {
           />
           <Route
             exact
-            path="/admin"
-            element={<Login title="Support 💰" />} //active="activeLink" title="Official Site"
+            path="/admin/*"
+            element={<Admin title="Admin 💰" />} //active="activeLink" title="Official Site"
           />
           <Route
             path="/*"
