@@ -1,0 +1,53 @@
+.login-cont form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    padding: 2vh 5vw;
+    width: 40vh;
+    /* justify-content: center; */
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.login-input{
+    display: flex;
+    flex-direction: row;
+}
+.login-input label{
+    width: 40%;
+    margin: auto;
+}
+
+.login-input input {
+  background-color: rgb(10, 10, 10);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  color: white;
+  font-size: 1.2rem;
+  width: 70%;
+  margin: 1rem;
+}
+
+
+.login-input input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.login-cont button {
+  background-color: unset;
+  border: 1px solid white;
+  padding: 1vh 2vw;
+  margin: 1vh;
+  color: white;
+  font-size: 1.35rem;
+  font-family: jost;
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+
+.login-cont button:hover {
+  background-color: white;
+  color: rgb(20, 20, 20);
+}

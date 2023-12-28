@@ -1,0 +1,30 @@
+.ml-main{
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    margin: 10vh 10vw;
+}
+
+.mc-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mc-main button {
+  text-transform: uppercase;
+  background-color: unset;
+  border: 1px solid white;
+  padding: 1vh 2vw;
+  color: white;
+  font-family: jost;
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+
+.mc-main button:hover {
+  background-color: white;
+  color: rgb(20, 20, 20);
+}

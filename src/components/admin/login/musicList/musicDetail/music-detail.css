@@ -1,0 +1,89 @@
+.md-main {
+  height: 100vh;
+  padding: 25vh 5vw;
+}
+.md-form {
+  max-width: 50vw;
+  margin: auto;
+}
+.md-form form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(20, 20, 20);
+  gap: 1rem;
+  /* width: 40vw; */
+  padding: 5vh 5vw;
+  font-size: 1.35rem;
+}
+
+.md-form-input {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1vw;
+}
+.md-form-input input {
+  background-color: rgb(10, 10, 10);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.md-form-input input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.md-date {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  min-width: 50%;
+}
+.md-form-button {
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+}
+.md-form-button button {
+  background-color: unset;
+  border: 1px solid white;
+  padding: 1vh 2vw;
+  margin: 1vh;
+  color: white;
+  font-size: 1rem;
+  font-family: jost;
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+
+.md-form-button button:hover {
+  background-color: white;
+  color: rgb(20, 20, 20);
+}
+.delete:hover {
+  border-color: rgb(255, 100, 100) !important;
+  background-color: rgb(255, 100, 100) !important;
+  /* color: white !important; */
+}
+/* For browsers that support the appearance property */
+.no-arrows {
+  appearance: textfield;
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* For browsers that don't support the appearance property */
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Optional styling for better consistency across browsers */
+.no-arrows {
+  width: 50px; /* Set a specific width for the input */
+  padding: 5px; /* Add padding for better visual appearance */
+  font-size: 14px; /* Adjust font size as needed */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+}
