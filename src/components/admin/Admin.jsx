@@ -7,6 +7,7 @@ import MusicList from "./dashboard/musicList/MusicList";
 import MusicDetail from "./dashboard/musicList/musicDetail/MusicDetail";
 import Error404 from "../Web/pages/error404/Error404";
 import ContactList from "./dashboard/contactList/ContactList";
+import YoutubeLink from "./dashboard/youtubeLink/YoutubeLink";
 
 function Admin() {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ function Admin() {
       <Route path="/dashboard" element={<Dashboard title="Dashboard 🚧" />} />
       <Route path="/music" element={<MusicList title="Music 🚧" />} />
       <Route path="music/view/:id" element={<MusicDetail />} />
+      <Route path="/youtube" element={<YoutubeLink title="Youtube 🚧" />} />
       <Route path="contact" element={<ContactList />} />
       <Route path="/*" element={<Error404 title="Error 🚧" />} />
     </Routes>

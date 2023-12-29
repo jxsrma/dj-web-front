@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./youtube.css";
 // import Fade from 'react-reveal'
 
+import { fetchYoutubeLink } from "../../../functions/musicUtils";
+
 function Youtube() {
+  const [youtubeLink, setYoutubeLink] = useState("");
+
+  useEffect(() => {
+    const fetchYTData = async () => {
+      const youtubeLink = await fetchYoutubeLink();
+      setYoutubeLink(youtubeLink);
+    };
+    fetchYTData();
+  }, []);
+
   return (
     <div className="youtube-main">
       <div className="youtube-heading">
@@ -15,8 +27,7 @@ function Youtube() {
       <div className="youtube-content">
         <div className="youtube-main-gallery">
           <iframe
-            src="https://www.youtube.com/embed/fPWfTaDFaLg"
-            title="JXSRMA - Athena"
+            src={"https://www.youtube.com/embed/"+youtubeLink}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             frameBorder={0}
           ></iframe>

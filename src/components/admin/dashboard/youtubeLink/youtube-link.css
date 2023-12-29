@@ -1,0 +1,96 @@
+.yl-main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .yl-form {
+    max-width: 80vw;
+    margin: auto;
+  }
+  .yl-form form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
+    gap: 1rem;
+    /* width: 40vw; */
+    padding: 5vh 5vw;
+    font-size: 1.35rem;
+  }
+  
+  .yl-form-input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .yl-form-input input {
+    max-width: 150px;
+    min-width: 150px;
+    background-color: rgb(10, 10, 10);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .yl-form-input input:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+  }
+  
+  .yl-date {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    min-width: 50%;
+  }
+  .yl-form-button {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+  }
+  .yl-form-button button {
+    text-transform: uppercase;
+    background-color: unset;
+    border: 1px solid white;
+    padding: 1vh 2vw;
+    margin: 1vh;
+    color: white;
+    font-size: 1rem;
+    font-family: jost;
+    font-weight: 500;
+    transition: 0.5s ease;
+  }
+  
+  .yl-form-button button:hover {
+    background-color: white;
+    color: rgb(20, 20, 20);
+    cursor: pointer;
+  }
+  .delete:hover {
+    border-color: rgb(255, 100, 100) !important;
+    background-color: rgb(255, 100, 100) !important;
+    /* color: white !important; */
+    cursor: pointer;
+  }
+  /* For browsers that support the appearance property */
+  .no-arrows {
+    appearance: textfield;
+    -moz-appearance: textfield; /* Firefox */
+  }
+  
+  /* For browsers that don't support the appearance property */
+  .no-arrows::-webkit-inner-spin-button,
+  .no-arrows::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Optional styling for better consistency across browsers */
+  .no-arrows {
+    width: 50px; /* Set a specific width for the input */
+    padding: 5px; /* Add padding for better visual appearance */
+    font-size: 14px; /* Adjust font size as needed */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+  }
+  

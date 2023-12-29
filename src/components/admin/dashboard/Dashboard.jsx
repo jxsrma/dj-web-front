@@ -17,6 +17,9 @@ function Dashboard(props) {
     if (action === "music") {
       navigate("/admin/music");
     }
+    if (action === "youtube") {
+      navigate("/admin/youtube");
+    }
     if (action === "contact") {
       navigate("/admin/contact");
     }
@@ -31,6 +34,7 @@ function Dashboard(props) {
       <div className="dash-cont">
         <div className="dash-cont-button">
           <button onClick={() => handleClick("music")}>Music</button>
+          <button onClick={() => handleClick("youtube")}>Youtube</button>
           <button onClick={() => handleClick("contact")}>Contact</button>
           <button onClick={() => handleClick("logout")}>LogOut</button>
         </div>

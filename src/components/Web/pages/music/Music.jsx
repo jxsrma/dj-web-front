@@ -6,11 +6,13 @@ import { collection, getDocs } from "firebase/firestore";
 import {
   groupReleasesByYear,
   getSortedYears,
+  fetchYoutubeLink,
 } from "../../../../functions/musicUtils";
 
 // Fetch Music Details
 
 function Music() {
+  const [youtubeLink, setYoutubeLink] = useState("");
   // use effect
 
   useEffect(() => {
@@ -18,8 +20,12 @@ function Music() {
       top: 0,
       behavior: "smooth",
     });
+    const fetchYTData = async () => {
+      const youtubeLink = await fetchYoutubeLink();
+      setYoutubeLink(youtubeLink);
+    };
+    fetchYTData();
     fetchData();
-    // console.log(selectedYear);
   }, []);
 
   const [selectedYear, setSelectedYear] = useState("latest");
@@ -93,9 +99,9 @@ function Music() {
         <div className="music-card-grid">
           <div className="music-card">
             <div className="music-iframe">
+              {console.log(youtubeLink)}
               <iframe
-                src="https://www.youtube.com/embed/fPWfTaDFaLg"
-                title="JXSRMA - Athena"
+                src={"https://www.youtube.com/embed/"+youtubeLink}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 frameBorder={0}
               ></iframe>
