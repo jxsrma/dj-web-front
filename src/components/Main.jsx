@@ -25,13 +25,15 @@ import Support from "./Web/pages/support/Support";
 import Admin from "./admin/Admin";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import Loading from "./Web/loading/Loading"
+
 import "./main.css";
 
 function Main() {
 
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Router>
         <Navbar />
         <Routes>
