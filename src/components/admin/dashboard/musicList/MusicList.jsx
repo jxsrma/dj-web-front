@@ -37,7 +37,8 @@ function MusicList() {
       });
       setAllValue(fetchData);
     } catch (error) {
-      console.error("Error: ", error);
+      alert("Error");
+      // console.error("Error: ", error);
     }
   };
 

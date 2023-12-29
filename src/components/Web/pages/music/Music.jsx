@@ -43,7 +43,8 @@ function Music() {
       });
       setAllValue(fetchData);
     } catch (error) {
-      console.error("Error: ", error);
+      alert("Error");
+      // console.error("Error: ", error);
     }
   };
 
@@ -99,7 +100,7 @@ function Music() {
         <div className="music-card-grid">
           <div className="music-card">
             <div className="music-iframe">
-              {console.log(youtubeLink)}
+              {/* {console.log(youtubeLink)} */}
               <iframe
                 src={"https://www.youtube.com/embed/"+youtubeLink}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

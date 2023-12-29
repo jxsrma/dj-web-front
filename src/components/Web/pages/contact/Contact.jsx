@@ -62,8 +62,9 @@ function Contact(props) {
         message: "",
       });
     } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("Internal Server Error");
+      // console.error("Error adding document: ", error);
+      alert("Error in adding");
+      // alert("Internal Server Error");
     }
   };
 

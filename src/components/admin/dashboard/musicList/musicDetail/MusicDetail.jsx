@@ -36,7 +36,7 @@ function MusicDetail() {
       behavior: "smooth",
     });
 
-    console.log("ID:", id);
+    // console.log("ID:", id);
     const fetchDocument = async () => {
       if (id !== "new") {
         try {
@@ -45,7 +45,7 @@ function MusicDetail() {
 
           if (docSnap.exists()) {
             const data = docSnap.data();
-            console.log(data);
+            // console.log(data);
             setArtist(data.artist);
             setTitle(data.title);
             setGenre(data.genre);
@@ -55,10 +55,11 @@ function MusicDetail() {
             setAlbum(data.album);
             setLink(data.link);
           } else {
-            console.log("No such document!");
+            alert("No such document!");
           }
         } catch (error) {
-          console.error("Error fetching document:", error);
+          alert("Error in fetching");
+          // console.error("Error fetching document:", error);
         }
       } else {
         setIsNew(true);
@@ -83,9 +84,9 @@ function MusicDetail() {
     try {
       const docRef = doc(collection(firestore, "music"), id);
       await updateDoc(docRef, updatedMusicData);
-      console.log("Document updated successfully!");
+      alert("Updated successfully!");
     } catch (error) {
-      console.error("Error updating document:", error);
+      alert("Error updating document:", error);
     }
   };
 
@@ -117,13 +118,15 @@ function MusicDetail() {
   const handleDelete = async (id) => {
     try {
       const musicRef = doc(firestore, "music", String(id));
-      console.log(musicRef);
-      console.log(id);
+      // console.log(musicRef);
+      // console.log(id);
 
       await deleteDoc(musicRef);
-      console.log("done");
+      // alert("Done");
+      navigate(-1);
     } catch (error) {
-      console.log("Error deleting document:", error);
+      // console.log("Error deleting document:", error);
+      alert("Error in deleting");
     }
   };
 

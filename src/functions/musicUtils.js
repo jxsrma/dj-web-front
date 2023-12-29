@@ -32,11 +32,12 @@ export const fetchYoutubeLink = async () => {
       const youtubeVideoLink = data?.link;
 
       if (youtubeVideoLink) {
-        console.log(youtubeVideoLink);
-        return(youtubeVideoLink);
+        // console.log(youtubeVideoLink);
+        return youtubeVideoLink;
       }
     }
   } catch (error) {
-    console.error("Error fetching YouTube link:", error);
+    alert("Error fetching YouTube link");
+    // console.error("Error fetching YouTube link:", error);
   }
 };

@@ -6,13 +6,14 @@ function ContactCard(props) {
   const handleDelete = async (id) => {
     try {
       const contactRef = doc(firestore, "userContactRecords", String(id));
-      console.log(contactRef);
-      console.log(id);
+      // console.log(contactRef);
+      // console.log(id);
 
       await deleteDoc(contactRef);
-      console.log("done");
+      // console.log("done");
     } catch (error) {
-      console.log("Error deleting document:", error);
+      // console.log("Error deleting document:", error);
+      alert("Error in deleting");
     }
   };
   return (
