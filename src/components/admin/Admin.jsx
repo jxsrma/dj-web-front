@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./login/Login";
 import Dashboard from "./dashboard/Dashboard";
-import MusicList from "./login/musicList/MusicList";
+import MusicList from "./dashboard/musicList/MusicList";
 
-import MusicDetail from "./login/musicList/musicDetail/MusicDetail";
-import Error404 from "../error404/Error404";
+import MusicDetail from "./dashboard/musicList/musicDetail/MusicDetail";
+import Error404 from "../Web/pages/error404/Error404";
+import ContactList from "./dashboard/contactList/ContactList";
 
 function Admin() {
   const navigate = useNavigate();
@@ -21,6 +22,10 @@ function Admin() {
   };
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     handleUser();
   }, []);
 
@@ -30,6 +35,7 @@ function Admin() {
       <Route path="/dashboard" element={<Dashboard title="Dashboard 🚧" />} />
       <Route path="/music" element={<MusicList title="Music 🚧" />} />
       <Route path="music/view/:id" element={<MusicDetail />} />
+      <Route path="contact" element={<ContactList />} />
       <Route path="/*" element={<Error404 title="Error 🚧" />} />
     </Routes>
   );

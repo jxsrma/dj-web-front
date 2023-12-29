@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import "./music-detail.css";
-import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import firestore from "../../../../firebaseConfig/firebase";
 
 function MusicDetail() {
@@ -15,44 +22,47 @@ function MusicDetail() {
   const [year, setYear] = useState();
   const [album, setAlbum] = useState();
   const [link, setLink] = useState();
-  const [musicData, setMusicData] = useState({
-    album: "",
-    artist: "",
-    date: "",
-    genre: "",
-    id: "",
-    link: "",
-    month: "",
-    title: "",
-    year: "",
-  });
+  const [trackId, setTrackId] = useState();
+
+  const [isNew, setIsNew] = useState(false);
 
   // const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    
     console.log("ID:", id);
     const fetchDocument = async () => {
-      try {
-        const docRef = doc(collection(firestore, "music"), id);
-        const docSnap = await getDoc(docRef);
+      if (id !== "new") {
+        try {
+          const docRef = doc(collection(firestore, "music"), id);
+          const docSnap = await getDoc(docRef);
 
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          setMusicData(data);
-          console.log(data);
-          setArtist(data.artist);
-          setTitle(data.title);
-          setGenre(data.genre);
-          setDate(data.date);
-          setMonth(data.month);
-          setYear(data.year);
-          setAlbum(data.album);
-          setLink(data.link);
-        } else {
-          console.log("No such document!");
+          if (docSnap.exists()) {
+            const data = docSnap.data();
+            console.log(data);
+            setArtist(data.artist);
+            setTitle(data.title);
+            setGenre(data.genre);
+            setDate(data.date);
+            setMonth(data.month);
+            setYear(data.year);
+            setAlbum(data.album);
+            setLink(data.link);
+          } else {
+            console.log("No such document!");
+          }
+        } catch (error) {
+          console.error("Error fetching document:", error);
         }
-      } catch (error) {
-        console.error("Error fetching document:", error);
+      } else {
+        setIsNew(true);
       }
     };
 
@@ -82,7 +92,7 @@ function MusicDetail() {
 
   const handleAdd = async (e, customId) => {
     e.preventDefault();
-  
+
     const newMusicData = {
       artist,
       title,
@@ -93,20 +103,28 @@ function MusicDetail() {
       album,
       link,
     };
-  
+
     try {
-      const musicCollection = collection(firestore, "music");
-  
-      // If the user has entered a custom ID, use it. Otherwise, Firestore will generate a unique ID.
-      if (customId) {
-        await addDoc(musicCollection, newMusicData, { id: customId });
-      } else {
-        await addDoc(musicCollection, newMusicData);
-      }
-  
-      console.log("Document added successfully!");
+      const musicRef = doc(firestore, "music", customId);
+
+      await setDoc(musicRef, newMusicData);
+
+      navigate("/admin/music");
     } catch (error) {
-      console.error("Error adding document:", error);
+      alert("Error adding document:", error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      const musicRef = doc(firestore, "music", String(id));
+      console.log(musicRef);
+      console.log(id);
+
+      await deleteDoc(musicRef);
+      console.log("done");
+    } catch (error) {
+      console.log("Error deleting document:", error);
     }
   };
 
@@ -119,6 +137,20 @@ function MusicDetail() {
     <div className="md-main">
       <div className="md-form">
         <form onSubmit={handleSubmit}>
+          {isNew ? (
+            <div className="md-form-input">
+              <label htmlFor="id">ID:</label>
+              <input
+                type="text"
+                id="id"
+                onChange={(e) => {
+                  setTrackId(e.target.value);
+                }}
+              />
+            </div>
+          ) : (
+            ""
+          )}
           <div className="md-form-input">
             <label htmlFor="artist">Artist:</label>
             <input
@@ -207,8 +239,27 @@ function MusicDetail() {
             />
           </div>
           <div className="md-form-button">
-            <button onClick={handleUpdate}>Update</button>
-            <button className="delete">Delete</button>
+            {isNew ? (
+              <button
+                onClick={(e) => {
+                  handleAdd(e, trackId);
+                }}
+              >
+                Add
+              </button>
+            ) : (
+              <div>
+                <button onClick={handleUpdate}>Update</button>
+                <button
+                  className="delete"
+                  onClick={() => {
+                    handleDelete(id);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            )}
           </div>
         </form>
       </div>

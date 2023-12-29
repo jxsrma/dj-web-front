@@ -41,18 +41,31 @@ function MusicList() {
     }
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   const releasesByYear = groupReleasesByYear(allValue);
   const sortedYears = getSortedYears(releasesByYear);
   // console.log(releasesByYear);
   return (
     <div className="ml-main">
       <div className="ml-card">
-            <div className="mc-main">
-              <button >
-               Add New
-              </button>
-            </div>
-          </div>
+        <div className="mc-main">
+          <button onClick={handleGoBack}>
+            <i class="fa-solid fa-arrow-left"></i> Go Back
+          </button>
+          <br />
+
+          <button
+            onClick={() => {
+              handleClick("new");
+            }}
+          >
+            Add New
+          </button>
+        </div>
+      </div>
       {sortedYears.map((year) =>
         sortTracksByMonth(releasesByYear[year]).map((track) => (
           <div className="ml-card" key={track.id}>

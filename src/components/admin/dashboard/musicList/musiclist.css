@@ -1,16 +1,17 @@
-.ml-main{
-    min-height: 100vh;
-    color: white;
-    display: flex;
-    gap: 2vh;
-    flex-direction: column;
-    margin: 10vh 10vw;
+.ml-main {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+  margin: 10vh 10vw;
+  padding: 5vw;
 }
 
 .mc-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mc-main button {
@@ -27,4 +28,5 @@
 .mc-main button:hover {
   background-color: white;
   color: rgb(20, 20, 20);
+  cursor: pointer;
 }

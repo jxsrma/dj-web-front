@@ -50,4 +50,5 @@
 .login-cont button:hover {
   background-color: white;
   color: rgb(20, 20, 20);
+  cursor: pointer;
 }

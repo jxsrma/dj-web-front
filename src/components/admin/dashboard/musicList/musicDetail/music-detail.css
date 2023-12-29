@@ -1,6 +1,8 @@
 .md-main {
   height: 100vh;
-  padding: 25vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .md-form {
   max-width: 50vw;
@@ -61,11 +63,13 @@
 .md-form-button button:hover {
   background-color: white;
   color: rgb(20, 20, 20);
+  cursor: pointer;
 }
 .delete:hover {
   border-color: rgb(255, 100, 100) !important;
   background-color: rgb(255, 100, 100) !important;
   /* color: white !important; */
+  cursor: pointer;
 }
 /* For browsers that support the appearance property */
 .no-arrows {
