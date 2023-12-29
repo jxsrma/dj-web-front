@@ -77,6 +77,9 @@ function Login(props) {
           />
         </div>
         <button onClick={handleLogIn}>Log In</button>
+        <button onClick={()=>{
+          navigate("/")
+        }}>Home</button>
       </form>
     </div>
   );
