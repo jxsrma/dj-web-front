@@ -37,7 +37,8 @@ function ContactList() {
   return (
     <div className="cl-main">
       <button onClick={handleGoBack} className="cl-back">
-        <i class="fa-solid fa-arrow-left"></i>{" "}Go Back
+      <i class="fa-solid fa-arrow-left">&nbsp;Go&nbsp;Back</i>
+
       </button>
       {allMessages.length > 0 ? (
         allMessages.map((message, index) => (

@@ -53,7 +53,7 @@ function MusicList() {
       <div className="ml-card">
         <div className="mc-main">
           <button onClick={handleGoBack}>
-            <i class="fa-solid fa-arrow-left"></i> Go Back
+            <i class="fa-solid fa-arrow-left">&nbsp;Go&nbsp;Back</i>
           </button>
           <br />
 

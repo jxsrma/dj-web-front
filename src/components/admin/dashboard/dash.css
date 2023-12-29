@@ -28,6 +28,7 @@
   justify-content: center;
 }
 .dash-cont-button button {
+  text-transform: uppercase;
   background-color: unset;
   border: 1px solid white;
   padding: 1vh 2vw;

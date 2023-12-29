@@ -31,12 +31,11 @@ function MusicDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-    
+
     console.log("ID:", id);
     const fetchDocument = async () => {
       if (id !== "new") {
@@ -131,6 +130,10 @@ function MusicDetail() {
   const handleSubmit = (e) => {
     e.preventDefault(); // Add this line to prevent form submission
     // Your code here
+  };
+
+  const handleGoBack = () => {
+    navigate(-1);
   };
 
   return (
@@ -240,13 +243,18 @@ function MusicDetail() {
           </div>
           <div className="md-form-button">
             {isNew ? (
-              <button
-                onClick={(e) => {
-                  handleAdd(e, trackId);
-                }}
-              >
-                Add
-              </button>
+              <div>
+                <button
+                  onClick={(e) => {
+                    handleAdd(e, trackId);
+                  }}
+                >
+                  Add
+                </button>
+                <button onClick={handleGoBack}>
+                  <i class="fa-solid fa-arrow-left">&nbsp;Go&nbsp;Back</i>
+                </button>
+              </div>
             ) : (
               <div>
                 <button onClick={handleUpdate}>Update</button>
@@ -257,6 +265,9 @@ function MusicDetail() {
                   }}
                 >
                   Delete
+                </button>
+                <button onClick={handleGoBack}>
+                  <i class="fa-solid fa-arrow-left">&nbsp;Go&nbsp;Back</i>
                 </button>
               </div>
             )}
