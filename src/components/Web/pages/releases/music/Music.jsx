@@ -1,57 +1,61 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./music.css";
-import firestore from "../../../firebaseConfig/firebase";
+import firestore from "../../../../firebaseConfig/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import {
   groupReleasesByYear,
   getSortedYears,
   fetchYoutubeLink,
-} from "../../../../functions/musicUtils";
+} from "../../../../../functions/musicUtils";
+import {
+  loadMusic,
+  loadYoutube,
+} from "../../../../../store/actions/music-actions";
+import { useDispatch, useSelector } from "react-redux";
 
 // Fetch Music Details
 
 function Music() {
   const [youtubeLink, setYoutubeLink] = useState("");
-  // use effect
+
+  const [selectedYear, setSelectedYear] = useState("latest");
+  const [allValue, setAllValue] = useState([]);
+  const [releasesByYear, setReleasesByYear] = useState([]);
+  const [sortedYears, setSortedYears] = useState([]);
+
+  const dispatch = useDispatch();
+  const music = useSelector((state) => state.music.musicList);
+  const youtube = useSelector((state) => state.music.youtube);
 
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-    const fetchYTData = async () => {
-      const youtubeLink = await fetchYoutubeLink();
-      setYoutubeLink(youtubeLink);
-    };
-    fetchYTData();
+
     fetchData();
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState("latest");
+  useEffect(() => {
+    if (music.length > 0) {
 
-  const [allValue, setAllValue] = useState([]);
+      setAllValue(music);
+      setReleasesByYear(groupReleasesByYear(music));
+      setSortedYears(getSortedYears(groupReleasesByYear(music)));
+    }
+  }, [music]);
+
   const fetchData = async () => {
     try {
-      const colRef = collection(firestore, "music");
-      const querySnapshot = await getDocs(colRef);
-
-      const fetchData = [];
-      querySnapshot.forEach((doc) => {
-        const musicData = doc.data();
-        fetchData.push({ id: doc.id, ...musicData });
-      });
-      setAllValue(fetchData);
+      await dispatch(loadMusic());
+      await dispatch(loadYoutube());
+      setYoutubeLink(youtube);
     } catch (error) {
-      alert("Error");
-      // console.error("Error: ", error);
+      console.error("Error fetching data:", error);
     }
   };
 
-  // group releases by year
-
-  const releasesByYear = groupReleasesByYear(allValue);
-  const sortedYears = getSortedYears(releasesByYear);
   return (
     <div className="music-container" id="music-top">
       <div className="music-heading">All Releases</div>
@@ -102,7 +106,8 @@ function Music() {
             <div className="music-iframe">
               {/* {console.log(youtubeLink)} */}
               <iframe
-                src={"https://www.youtube.com/embed/"+youtubeLink}
+                src={"https://www.youtube.com/embed/" + youtubeLink}
+                title="youtube"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 frameBorder={0}
               ></iframe>
@@ -123,7 +128,7 @@ function Music() {
                 <div className="music-card">
                   <div className="music-image">
                     <a
-                      href={release.link}
+                      href={"/release/" + release.id}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -11,6 +11,7 @@ import Footer from "./Web/footer/Footer";
 // import Youtube from "./Youtube";
 // eslint-disable-next-line
 import Releases from "./Web/pages/releases/Releases";
+import Song from "./Web/pages/releases/music/song/Song";
 // eslint-disable-next-line
 // import Music from "./Music";
 // eslint-disable-next-line
@@ -25,15 +26,14 @@ import Support from "./Web/pages/support/Support";
 import Admin from "./admin/Admin";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Loading from "./Web/loading/Loading"
+import Loading from "./Web/loading/Loading";
 
 import "./main.css";
 
 function Main() {
-
   return (
     <div>
-      <Loading />
+      {/* <Loading /> */}
       <Router>
         <Navbar />
         <Routes>
@@ -46,6 +46,10 @@ function Main() {
             exact
             path="/release"
             element={<Releases title="Releases 🎶" />} //active="activeLink" title="Official Site"
+          />
+          <Route
+            path="/release/:id"
+            element={<Song title="Error 🚧" />} //active="activeLink" title="Official Site"
           />
           <Route
             exact

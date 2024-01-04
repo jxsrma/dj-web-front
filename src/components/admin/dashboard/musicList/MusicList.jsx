@@ -63,7 +63,7 @@ function MusicList() {
               handleClick("new");
             }}
           >
-            Add New
+            <i class="fa-solid fa-plus"></i>&nbsp;Add&nbsp;New
           </button>
         </div>
       </div>

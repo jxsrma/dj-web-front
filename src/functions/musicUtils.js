@@ -2,6 +2,7 @@ import { doc, getDoc } from "firebase/firestore";
 import firestore from "../components/firebaseConfig/firebase";
 
 export const groupReleasesByYear = (releases) => {
+  console.log(releases);
   return releases.reduce((acc, release) => {
     const { year } = release;
     if (!acc[year]) {
