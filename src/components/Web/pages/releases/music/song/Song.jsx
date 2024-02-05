@@ -3,6 +3,7 @@ import "./song.css";
 import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import firestore from "../../../../../firebaseConfig/firebase";
+import { Toaster, toast } from "sonner";
 function Song() {
   const { id } = useParams();
 
@@ -32,10 +33,10 @@ function Song() {
             setLink(data.link);
           }
         } else {
-          alert("No such document!");
+          toast.error("No such document!");
         }
       } catch (error) {
-        alert("Error in fetching");
+        toast.error("Error in fetching");
         // console.error("Error fetching document:", error);
       }
     };
@@ -72,6 +73,7 @@ function Song() {
       </button>
       <iframe src={link} title="Track" frameborder="0"></iframe>
       {/* </div> */}
+      <Toaster />
     </div>
   );
 }

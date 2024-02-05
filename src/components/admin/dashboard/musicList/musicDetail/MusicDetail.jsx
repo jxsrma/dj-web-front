@@ -11,6 +11,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import firestore from "../../../../firebaseConfig/firebase";
+import { Toaster, toast } from "sonner";
 
 function MusicDetail() {
   const { id } = useParams();
@@ -55,10 +56,10 @@ function MusicDetail() {
             setAlbum(data.album);
             setLink(data.link);
           } else {
-            alert("No such document!");
+            toast.info("No such document!");
           }
         } catch (error) {
-          alert("Error in fetching");
+          toast.error("Error in fetching");
           // console.error("Error fetching document:", error);
         }
       } else {
@@ -84,9 +85,9 @@ function MusicDetail() {
     try {
       const docRef = doc(collection(firestore, "music"), id);
       await updateDoc(docRef, updatedMusicData);
-      alert("Updated successfully!");
+      toast.success("Updated successfully!");
     } catch (error) {
-      alert("Error updating document:", error);
+      toast.error("Error updating document:", error);
     }
   };
 
@@ -111,7 +112,7 @@ function MusicDetail() {
 
       navigate("/admin/music");
     } catch (error) {
-      alert("Error adding document:", error);
+      toast.error("Error adding document:", error);
     }
   };
 
@@ -126,7 +127,7 @@ function MusicDetail() {
       navigate(-1);
     } catch (error) {
       // console.log("Error deleting document:", error);
-      alert("Error in deleting");
+      toast.error("Error in deleting");
     }
   };
 
@@ -277,6 +278,7 @@ function MusicDetail() {
           </div>
         </form>
       </div>
+      <Toaster />
     </div>
   );
 }

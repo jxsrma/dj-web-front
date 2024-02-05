@@ -33,7 +33,7 @@ import "./main.css";
 function Main() {
   return (
     <div>
-      {/* <Loading /> */}
+      <Loading />
       <Router>
         <Navbar />
         <Routes>

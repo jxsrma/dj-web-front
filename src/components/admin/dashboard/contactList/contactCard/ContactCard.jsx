@@ -2,6 +2,7 @@ import React from "react";
 import "./contact-card.css";
 import { deleteDoc, doc } from "firebase/firestore";
 import firestore from "../../../../firebaseConfig/firebase";
+import { Toaster, toast } from "sonner";
 function ContactCard(props) {
   const handleDelete = async (id) => {
     try {
@@ -13,7 +14,7 @@ function ContactCard(props) {
       // console.log("done");
     } catch (error) {
       // console.log("Error deleting document:", error);
-      alert("Error in deleting");
+      toast.error("Error in deleting");
     }
   };
   return (
@@ -31,6 +32,7 @@ function ContactCard(props) {
       >
         Delete
       </button>
+      <Toaster />
     </div>
   );
 }

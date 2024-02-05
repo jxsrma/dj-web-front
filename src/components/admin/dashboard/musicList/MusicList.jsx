@@ -8,6 +8,7 @@ import {
   sortTracksByMonth,
 } from "../../../../functions/musicUtils";
 import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from "sonner";
 
 function MusicList() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function MusicList() {
       });
       setAllValue(fetchData);
     } catch (error) {
-      alert("Error");
+      toast.error("Error");
       // console.error("Error: ", error);
     }
   };
@@ -78,6 +79,7 @@ function MusicList() {
           </div>
         ))
       )}
+      <Toaster />
     </div>
   );
 }

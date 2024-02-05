@@ -10,6 +10,9 @@ import ContactList from "./dashboard/contactList/ContactList";
 import YoutubeLink from "./dashboard/youtubeLink/YoutubeLink";
 
 function Admin() {
+
+  document.title = "JXSRMA | Admin 🛡️";
+
   const navigate = useNavigate();
 
   const handleUser = () => {

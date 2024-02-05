@@ -4,6 +4,7 @@ import firestore from "../../../firebaseConfig/firebase";
 import { fetchYoutubeLink } from "../../../../functions/musicUtils";
 import { useNavigate } from "react-router-dom";
 import "./youtube-link.css";
+import { Toaster, toast } from "sonner";
 function YoutubeLink() {
   const [youtubeLink, setYoutubeLink] = useState("");
   const navigate = useNavigate();
@@ -22,9 +23,9 @@ function YoutubeLink() {
     try {
       const docRef = doc(collection(firestore, "links"), "youtube");
       await updateDoc(docRef, { link: updatedLink });
-      alert("Link Updated Successfully!");
+      toast.success("Link Updated Successfully!");
     } catch (error) {
-      alert("Error in updating");
+      toast.error("Error in updating");
       // console.error("Error updating document:", error);
     }
   };
@@ -61,6 +62,7 @@ function YoutubeLink() {
           </div>
         </form>
       </div>
+      <Toaster />
     </div>
   );
 }

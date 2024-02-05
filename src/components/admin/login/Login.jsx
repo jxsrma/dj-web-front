@@ -5,6 +5,7 @@ import "./login.css";
 import firestore from "../../firebaseConfig/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from "sonner";
 
 function Login(props) {
   const [username, setUsername] = useState("");
@@ -30,10 +31,10 @@ function Login(props) {
         const adminData = docSnapshot.data();
         setAdmin(adminData);
       } else {
-        alert("Admin not found");
+        toast.error("Admin not found");
       }
     } catch (error) {
-      alert("Error: ", error);
+      toast.error("Error: ", error);
     }
   };
 
@@ -46,7 +47,7 @@ function Login(props) {
       // const user = storedUser ? JSON.parse(storedUser) : null;
       navigate("/admin/dashboard");
     } else {
-      alert("failed");
+      toast.error("failed");
     }
   };
 
@@ -77,10 +78,15 @@ function Login(props) {
           />
         </div>
         <button onClick={handleLogIn}>Log In</button>
-        <button onClick={()=>{
-          navigate("/")
-        }}>Home</button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
+        </button>
       </form>
+      <Toaster />
     </div>
   );
 }

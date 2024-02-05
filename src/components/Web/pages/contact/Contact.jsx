@@ -3,6 +3,7 @@ import firestore from "../../../firebaseConfig/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 import "./contact.css";
+import { Toaster, toast } from "sonner";
 
 function Contact(props) {
   document.title = "JXSRMA | " + props.title;
@@ -31,40 +32,35 @@ function Contact(props) {
   const submitData = async (event) => {
     event.preventDefault();
     const { name, email, subject, message } = userData;
-
+  
     try {
-      const timestamp = new Date();
-
-      const docRef = await addDoc(collection(firestore, "userContactRecords"), {
-        name,
-        email,
-        subject,
-        message,
-        timestamp, // Include the timestamp in your data
-      });
-
-      alert("Your Message is been send Successfully!");
-
-      //   const config = {
-      //     SecureToken : process.env.REACT_APP_MAIL_SECURE_TOKEN,
-      //     To : email,
-      //     From : process.env.REACT_APP_MAIL_USERNAME,
-      //     Subject : subject,
-      //     Body : message
-      // };
-
-      // window.Email.send(config).then(()=> alert("Sent Success"));
-
-      setUserData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      if (!name || !email || !subject || !message) {
+        toast.warning("Please fill in all details");
+      } else {
+        toast.loading("Loading data");
+        const timestamp = new Date();
+  
+        const docRef = await addDoc(collection(firestore, "userContactRecords"), {
+          name,
+          email,
+          subject,
+          message,
+          timestamp, // Include the timestamp in your data
+        });
+  
+        toast.success("Your Message has been sent successfully!");
+  
+        setUserData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
     } catch (error) {
-      // console.error("Error adding document: ", error);
-      alert("Error in adding");
-      // alert("Internal Server Error");
+      // Handle the error, e.g., show an error toast
+      toast.error("Error in adding");
+      console.error("Error adding document: ", error);
     }
   };
 
@@ -87,7 +83,9 @@ function Contact(props) {
         <form>
           <h1>Fill this form</h1>
           <div className="form-field">
-            <label htmlFor="name">📛 Name</label>
+            <label htmlFor="name">
+              📛 Name<span style={{ color: "red" }}>*</span>
+            </label>
             <input
               type="text"
               name="name"
@@ -99,7 +97,9 @@ function Contact(props) {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="email">📧 E-Mail</label>
+            <label htmlFor="email">
+              📧 E-Mail<span style={{ color: "red" }}>*</span>
+            </label>
             <input
               type="email"
               name="email"
@@ -111,7 +111,9 @@ function Contact(props) {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="subject">💼 Subject</label>
+            <label htmlFor="subject">
+              💼 Subject<span style={{ color: "red" }}>*</span>
+            </label>
             <input
               type="text"
               name="subject"
@@ -123,7 +125,9 @@ function Contact(props) {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="message">✍️ Message</label>
+            <label htmlFor="message">
+              ✍️ Message<span style={{ color: "red" }}>*</span>
+            </label>
             <textarea
               type="text"
               name="message"
@@ -153,6 +157,7 @@ function Contact(props) {
           </span>
         </form>
       </div>
+      <Toaster richColors />
     </div>
   );
 }
